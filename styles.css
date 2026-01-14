@@ -629,3 +629,125 @@ nav a.active {
 @media print {
   .sig-btn { display: none; }
 }
+/* =========================
+   MODERN UI POLISH LAYER
+   Safe: visual-only overrides
+========================= */
+
+/* 1. Design tokens (modern system) */
+:root {
+  --primary: #0047ab;
+  --primary-soft: #eaf1ff;
+  --bg-main: #f6f9ff;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.06);
+  --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 2. Global font upgrade (modern & clean) */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* 3. Header & nav = modern bar */
+header {
+  box-shadow: var(--shadow-sm);
+}
+
+nav a {
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+
+/* 4. Section spacing = premium feel */
+#welcome,
+#learner-support,
+#contact,
+.tab-content {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin: 40px auto;
+}
+
+/* 5. Headings hierarchy */
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+#welcome h1 {
+  font-size: 40px;
+}
+
+#welcome h2 {
+  font-size: 28px;
+}
+
+/* 6. Cards (teachers, announcements, forms, collapsibles) */
+.teacher-profile,
+.announcement-box,
+.application-form,
+.collapsible,
+#apply-online-cards details {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+/* 7. Images = softer & modern */
+img {
+  border-radius: var(--radius-md);
+}
+
+/* hover lift */
+.teacher-profile:hover,
+.award-item img:hover,
+.yearbook-item img:hover,
+.rcl-member img:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+/* 8. Buttons = modern CTA */
+button,
+#downloadBtn,
+.sig-btn[data-action="done"] {
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover,
+#downloadBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* 9. Tables = cleaner */
+table {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+table th {
+  font-weight: 600;
+}
+
+/* 10. Footer = subtle, modern */
+footer {
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+}

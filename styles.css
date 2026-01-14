@@ -751,3 +751,34 @@ table th {
 footer {
   box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
 }
+nav a {
+  position: relative;
+  font-weight: 500;
+}
+
+/* underline */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: 5px;
+  width: 70%;
+  height: 3px;
+  background-color: #ffd43b; /* GOLD accent */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+/* active tab */
+nav a.active::after {
+  transform: scaleX(1);
+}
+
+/* hover preview */
+nav a:hover::after {
+  transform: scaleX(1);
+}
+nav a.active {
+  color: #ffd43b;
+}

@@ -10,6 +10,9 @@ header {
     background-color: #0047ab;
     padding: 10px 0;
 }
+.tab-content.active {
+    display: block;
+}
 
 nav ul {
     list-style-type: none;

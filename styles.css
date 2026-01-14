@@ -782,3 +782,49 @@ nav a:hover::after {
 nav a.active {
   color: #ffd43b;
 }
+.subjects-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.subjects-card h2 {
+  text-align: center;
+  color: #0047ab;
+  margin-bottom: 25px;
+}
+
+/* grade blocks */
+.grade-block {
+  border: 2px solid #0047ab;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+/* clickable header */
+.grade-block summary {
+  background: #0047ab;
+  color: white;
+  padding: 14px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* hide arrow */
+.grade-block summary::marker {
+  display: none;
+}
+
+/* content */
+.grade-block ul {
+  padding: 20px;
+  margin: 0;
+  background: #f7fbff;
+  line-height: 1.8;
+}

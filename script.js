@@ -55,3 +55,21 @@ function closeCareerInfo(btn) {
   btn.closest('.career-info').classList.remove('open');
 }
 
+function toggleCareerInfo(img) {
+  const item = img.closest('.career-item');
+  const info = item.querySelector('.career-info');
+
+  // Close all other open cards
+  document.querySelectorAll('.career-info').forEach(el => {
+    if (el !== info) el.classList.remove('active');
+  });
+
+  // Toggle current
+  info.classList.toggle('active');
+}
+
+function closeCareerInfo(btn) {
+  btn.closest('.career-info').classList.remove('active');
+}
+
+

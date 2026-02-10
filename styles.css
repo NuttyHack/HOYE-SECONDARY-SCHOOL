@@ -2826,3 +2826,9 @@ html, body {
     white-space: nowrap;
   }
 }
+.table-hint {
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 6px;
+}

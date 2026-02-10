@@ -2874,3 +2874,10 @@ html, body {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.career-info {
+  display: none;
+}
+
+input:checked ~ .career-info {
+  display: block;
+}

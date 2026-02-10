@@ -397,12 +397,16 @@
   </p>
   <div class="career-gallery">
 
-    <!-- NSFAS -->
     <div class="career-item">
-      <img src="nsfas.jpg" alt="NSFAS Info" onclick="toggleCareerInfo(this)">
-      <p class="caption">NSFAS</p>
-      <div class="career-info">
-  <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
+  <input type="checkbox" id="nsfas-toggle" hidden>
+
+  <label for="nsfas-toggle">
+    <img src="nsfas.jpg" alt="NSFAS Info">
+    <p class="caption">NSFAS</p>
+  </label>
+
+  <div class="career-info">
+    <label for="nsfas-toggle" class="close-info">✖ Close</label>
 
 
         <p>The National Student Financial Aid Scheme (NSFAS) provides financial assistance to eligible students at public universities and TVET colleges in South Africa.</p>

@@ -65,49 +65,248 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-.tab-content {
-    display: none;
+/* ===== Performance Tab ===== */
+#performance {
+    display: block;
     padding: 20px;
-    background-color: #f0f8ff;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+    background: #f0f8ff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-table {
+
+/* Table Styling */
+#performance table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-table th {
-    background-color: #003366;
+#performance table th {
+    background-color: #0047ab;
     color: white;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
+    font-weight: 600;
+    padding: 14px;
     text-align: center;
 }
+
+#performance table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+/* Alternate row shading */
+#performance table tbody tr:nth-child(even) {
+    background-color: #f5f9ff;
+}
+
+/* Row hover effect */
+#performance table tbody tr:hover {
+    background-color: #d0e4ff;
+    transform: scale(1.01);
+    transition: all 0.25s ease;
+}
+
+/* Pass rate bar */
+.pass-bar {
+    background: #e0e0e0;
+    border-radius: 12px;
+    height: 14px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.pass-bar-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #0a58ca, #0047ab);
+    border-radius: 12px;
+    transition: width 0.5s ease;
+}
+
+/* Yearbook gallery */
+.yearbook-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.yearbook-item {
+    width: 180px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.yearbook-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.yearbook-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.yearbook-item p {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #004080;
+}
+/* Container for performance values */
+.performance-values {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    bottom: -320px;
+    right: 20px;
+    max-width: 220px;
+}
+/* Mobile adjustments for performance values */
+@media screen and (max-width: 768px) {
+    .performance-values {
+        position: relative;       /* no longer absolute */
+        bottom: auto;
+        right: auto;
+        flex-direction: row;      /* horizontal on small screens */
+        justify-content: center;  /* center horizontally */
+        flex-wrap: wrap;          /* wrap if too many */
+        max-width: 100%;
+        margin-top: 20px;         /* spacing from table/yearbooks */
+        gap: 12px;
+    }
+
+    .performance-values .value-card {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .performance-values .value-icon {
+        font-size: 22px;
+    }
+}
+
+/* Value cards - similar to event values */
+.performance-values .value-card {
+    position: relative;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0047ab;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Icon hover */
+.performance-values .value-card:hover .value-icon {
+    transform: rotate(15deg) scale(1.3);
+}
+
+/* Card hover lift + color change */
+.performance-values .value-card:hover {
+    background: linear-gradient(135deg, #0a58ca, #0047ab);
+    color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.2);
+}
+
+/* Value icon styling */
+.performance-values .value-icon {
+    font-size: 24px;
+    transition: transform 0.4s ease;
+}
+
+/* ===== Staff Cards Modern Style ===== */
 .teacher-profile {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #f3f3f3;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 15px 30px rgba(7, 30, 158, 0.582);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.teacher-profile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(11, 52, 128, 0.712);
 }
 
 .teacher-description {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
-.teacher-image img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
+.teacher-description h3:first-child {
+    color: #0047ab;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
+
+.teacher-description h3:last-child {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.teacher-description p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Profile Image */
+.teacher-image img {
+    width: 220px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teacher-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgb(21, 56, 153);
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 800px) {
+    .teacher-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .teacher-description {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    .teacher-image img {
+        width: 70%;
+        max-width: 250px;
+    }
+}
+
 #welcome h2 {
     color: #004080;
     margin-top: 30px;
@@ -126,22 +325,25 @@ table th, table td {
     line-height: 1.6;
 }
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px; /* pill */
+  transition: all 0.25s ease;
+  position: relative;
 }
 
+/* hover background (visible but classy) */
 nav a:hover {
-    background-color: #0a58ca;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
 }
 
+/* active tab background */
 nav a.active {
-    background-color: white;
-    color: #0a58ca;    
-    border-radius: 5px;
-    font-weight: bold;
+  background: white;
+  color: #0047ab;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
+
 #learner-support {
     padding: 40px 20px;
     background-color: #f5faff;
@@ -166,6 +368,201 @@ nav a.active {
 .support-branches li {
     margin-bottom: 8px;
 }
+/* ===== LEARNER SUPPORT ===== */
+#learner-support {
+  padding: 60px 24px;
+  background: linear-gradient(180deg, #f5faff, #ffffff);
+  border-radius: 24px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+#learner-support h2 {
+  font-size: 32px;
+  color: #0047ab;
+  margin-bottom: 8px;
+}
+
+.support-intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 36px;
+}
+
+/* ===== SUPPORT CARDS ===== */
+.support-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.support-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  background: white;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+}
+
+.support-card h4 {
+  font-size: 18px;
+  color: #0047ab;
+  margin-bottom: 4px;
+}
+
+.support-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.support-icon {
+  font-size: 70px;
+  transition: transform 0.4s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #0a58ca, #0047ab);
+}
+
+.support-card:hover h4,
+.support-card:hover p {
+  color: #ffffff;
+}
+
+.support-card:hover .support-icon {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* ===== RCL SECTION ===== */
+.rcl-title {
+  font-size: 26px;
+  color: #0047ab;
+  margin-bottom: 28px;
+}
+
+/* ===== RCL GALLERY ===== */
+.rcl-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.rcl-member {
+  text-align: center;
+}
+
+.rcl-member img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.rcl-member img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0047ab;
+}
+/* ===== Learner Support Values ===== */
+.learner-values {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* center on desktop */
+  margin: 30px 0;
+  flex-wrap: wrap; /* wrap on small screens */
+}
+
+.learner-values .value-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 18px 24px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0047ab;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+/* Icon hover effect */
+.learner-values .value-icon {
+  font-size: 28px;
+  transition: transform 0.5s ease;
+}
+
+.learner-values .value-card:hover .value-icon {
+  transform: rotate(15deg) scale(1.3);
+}
+
+/* Gradient background and lift on hover */
+.learner-values .value-card:hover {
+  background: linear-gradient(135deg, #0a58ca, #0047ab);
+  color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+/* Animated underline */
+.learner-values .value-card::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.learner-values .value-card:hover::after {
+  width: 60%;
+}
+
+/* ===== Mobile Adjustments ===== */
+@media screen and (max-width: 768px) {
+  .learner-values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learner-values .value-card {
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  #learner-support {
+    padding: 40px 18px;
+  }
+
+  .support-card {
+    padding: 18px 20px;
+  }
+}
+
 #contact {
     background-color: #f0f0f0;
     padding: 20px;
@@ -178,60 +575,481 @@ nav a.active {
 #contact p {
     line-height: 1.6;
 }
-.yearbook-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-top: 20px;
+/* Event Folders */
+.event-folder {
+  border: 2px solid #0047ab;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #f5faff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.yearbook-item {
-    text-align: center;
+.event-folder[open] {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.yearbook-item img {
-    width: auto;
-    height: 250px; /* Set a fixed height */
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: transform 0.3s;
+/* Summary (clickable header) */
+.event-folder summary {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 20px;
+  list-style: none;
+  position: relative;
+  color: #004080;
+  background: linear-gradient(135deg, #e6f0ff, #f0f8ff);
+  transition: background 0.3s ease;
+  border-bottom: 1px solid #0047ab;
+  border-radius: 12px;
 }
 
-
-.yearbook-item img:hover {
-    transform: scale(1.05);
-}
-.awards-gallery {
-    display: flex;
-    flex-wrap: wrap;  
-    gap: 20px;
-    margin-bottom: 30px;
+.event-folder summary::marker {
+  display: none; /* hide default marker */
 }
 
+/* Arrow indicator */
+.event-folder summary::after {
+  content: "▸";
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.event-folder[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Event gallery inside folder */
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Individual images */
 .award-item {
-    width: 250px;
-    text-align: center;
+  flex: 0 0 240px;
+  text-align: center;
 }
 
 .award-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.caption {
-  margin-top: 8px;
-  font-size: 8px;   /* smaller, neat */
-  font-weight: 300;  /* not too bold */
-  color: #333;
+.award-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Caption */
+.award-item .caption {
+  font-size: 14px;
+  font-weight: 600;
+  color: #004080;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
+  margin-top: 6px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+  .event-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .event-folder summary {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+}
+/* Container for all event cards (vertical stack) */
+.events-modern {
+  display: flex;
+  flex-direction: column; /* vertical alignment */
+  gap: 25px;
+  padding: 20px 0;
+}
+
+/* Individual event card */
+.event-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Checkbox hidden */
+.event-card input {
+  display: none;
+}
+
+/* Clickable folder header */
+/* ===== EVENT FOLDER COVER (SQUARE) ===== */
+/* ===== EVENT FOLDER COVER (SQUARE) ===== */
+.event-summary {
+  width: 280px;           /* size of folder square */
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 4px solid #0047ab;  /* default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f8ff;    /* background for letterbox areas */
+  transition: border-color 0.3s ease, transform 0.35s ease;
+}
+
+/* Hover effect: border light blue */
+.event-summary:hover {
+  border-color: #a8d0ff;  /* light blue on hover */
+  transform: translateY(-5px);  /* slight lift effect */
+}
+
+/* Full image visible */
+.event-summary img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* show full image without cropping */
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* Slight zoom on image hover */
+.event-summary:hover img {
+  transform: scale(1.03);
 }
 
 
+/* Folder label */
+.event-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.15)
+  );
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.event-label span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.event-row {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.event-info {
+  flex: 1;
+  padding-left: 20px;
+  border-left: 4px solid #0047ab; /* modern blue accent */
+}
+
+.event-info h3 {
+  margin: 8px 0;
+  font-size: 22px;
+  color: #0047ab;
+  font-weight: 700;
+}
+
+.event-info p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+
+/* Gallery hidden by default */
+.event-gallery {
+  max-height: 0;
+  overflow-x: auto;
+  display: flex;
+  gap: 22px;
+  padding: 0 20px;
+  background: #f5f9ff;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.event-card input:checked ~ .event-gallery {
+  max-height: 320px;
+  padding: 20px;
+}
+
+
+/* Show gallery when folder clicked */
+.event-card input:checked ~ .event-gallery {
+  max-height: 300px; /* adjust for your images */
+  padding: 15px;
+}
+
+/* Individual images inside gallery */
+.event-gallery .award-item {
+  flex: 0 0 220px;   /* fixed width for horizontal row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ===== Event row layout (Desktop First) ===== */
+.event-row {
+  display: flex;
+  align-items: center;      /* vertical alignment */
+  gap: 24px;
+  width: 100%;
+}
+
+/* Event info */
+.event-info {
+  flex: 1;
+  max-width: 600px; /* controls how far text can stretch */
+}
+
+/* ===== Event Values (always visible, horizontal on desktop) ===== */
+.event-values {
+  display: flex;
+  flex-direction: row;        /* horizontal on desktop */
+  gap: 14px;
+  margin-left: auto;          /* push values to the right of info */
+  align-items: center;        /* vertical center */
+  justify-content: flex-start;
+  flex-wrap: wrap;            /* wrap if too many cards */
+}
+
+/* Each value card */
+.event-values .value-card {
+  position: relative;
+  background: white;
+  padding: 14px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0047ab;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon styling + hover animation */
+.event-values .value-icon {
+  font-size: 24px;
+  transition: transform 0.5s ease;
+}
+
+.event-values .value-card:hover .value-icon {
+  transform: rotate(15deg) scale(1.3);
+}
+
+/* Gradient hover + lift */
+.event-values .value-card:hover {
+  background: linear-gradient(135deg, #0a58ca, #0047ab);
+  color: white;
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+/* Animated underline */
+.event-values .value-card::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.event-values .value-card:hover::after {
+  width: 60%;
+}
+
+/* ===== Mobile adjustments for event values ===== */
+@media screen and (max-width: 768px) {
+  .event-row {
+    flex-direction: column;       /* stack event info + values vertically */
+    align-items: flex-start;      /* left-align everything */
+  }
+
+  .event-values {
+    margin-left: 0;               /* remove left margin for vertical layout */
+    margin-top: 12px;             /* spacing below event info */
+    width: 100%;                  /* take full width on small screens */
+    flex-direction: row;           /* horizontal row */
+    flex-wrap: wrap;              /* wrap cards if needed */
+    justify-content: flex-start;  /* align left */
+  }
+
+  .event-values .value-card {
+    flex: 1 1 auto;               /* allow cards to shrink/grow */
+    min-width: 140px;             /* maintain readable size */
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .event-values .value-icon {
+    font-size: 20px;
+  }
+}
+
+
+/* Mobile adjustments for event folders & gallery */
+@media screen and (max-width: 768px) {
+
+  /* Event folder container (square) */
+  .event-summary {
+    width: 100%;          /* fill container width */
+    max-width: 100%;      /* remove old limits */
+    aspect-ratio: 1 / 1;  /* maintain square */
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  /* Event folder image */
+  .event-summary img {
+    width: 100%;          /* fill the folder horizontally */
+    height: 100%;         /* fill folder vertically */
+    object-fit: contain;  /* fit inside without cropping */
+  }
+
+  /* Event gallery images */
+  .event-gallery .award-item {
+    flex: 1 1 100%;       /* full width for each item */
+    max-width: 100%;      /* remove any small limits */
+    margin-bottom: 15px;  /* spacing between items */
+  }
+
+  .event-gallery .award-item img {
+    width: 100%;          /* fill item horizontally */
+    height: auto;         /* scale height automatically */
+    object-fit: contain;  /* entire image visible */
+    border-radius: 12px;
+  }
+}
+
+
+/* Show values when folder is opened */
+.event-card input:checked ~ .event-row .event-values {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Images */
+.event-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Caption under image */
+.event-gallery .caption {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #004080;
+  margin-top: 6px;
+}
+
+/* Close button */
+.close-btn {
+  position: sticky;
+  left: 100%;
+  align-self: flex-start;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+/* ===== Performance Values (Horizontal Layout) ===== */
+.performance-values {
+  display: flex;
+  flex-direction: row;      /* HORIZONTAL */
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;         /* space from table */
+  flex-wrap: wrap;          /* safe for smaller screens */
+}
+@media (min-width: 1200px) {
+  .performance-values {
+    justify-content: center;
+  }
+}
+
+/* Horizontal scroll bar styling */
+.event-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.event-gallery::-webkit-scrollbar-thumb {
+  background: #0047ab;
+  border-radius: 4px;
+}
+
+.event-gallery::-webkit-scrollbar-track {
+  background: #f0f8ff;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .event-summary img {
+    width: 60px;
+    height: 60px;
+  }
+  .event-gallery .award-item {
+    flex: 0 0 160px;
+  }
+  .event-gallery img {
+    height: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .event-summary {
+    max-width: 260px;
+  }
+}
 
 
 .caption {
@@ -385,27 +1203,71 @@ nav a.active {
   align-items: center;
   gap: 15px;
 }
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #004080;
+  text-align: center;
+  margin-bottom: 6px;
+}
 
-.announcement-box img {
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Announcement box as a modern card */
+.announcement-box {
+  border: 2px solid #004080;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 720px;
+  background: linear-gradient(145deg, #f9f9f9, #e6f0ff);
+  box-shadow: 0 6px 18px rgba(0, 71, 171, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.announcement-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 71, 171, 0.25);
+}
+
+.announcement-box summary {
+  font-size: 18px;
+  font-weight: 700;
+  color: #004080;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.announcement-box summary img {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 
-.announcement-box p {
-  margin-top: 10px;
+.announcement-content {
+  margin-top: 15px;
+  line-height: 1.6;
   color: #333;
   font-size: 16px;
-  line-height: 1.6;
+  transition: max-height 0.5s ease;
 }
+
 .announcement-gallery {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  justify-content: center;
 }
 
 .announcement-gallery img {
@@ -414,8 +1276,15 @@ nav a.active {
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
+
+.announcement-gallery img:hover {
+  transform: scale(1.05);
+  border-color: #004080;
+}
+
 /* Style the event date headings */
 #events p {
   font-size: 19px;
@@ -830,4 +1699,1066 @@ nav a.active {
   margin: 0;
   background: #f7fbff;
   line-height: 1.8;
+}
+/* HERO only (top section) */
+#welcome {
+  background: linear-gradient(
+    135deg,
+    #0047ab 0%,
+    #0a58ca 50%,
+    #eaf1ff 100%
+  );
+  color: white;
+  padding: 80px 20px;
+}
+
+#welcome h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+#welcome p {
+  font-size: 20px;
+  max-width: 850px;
+  opacity: 0.95;
+}
+/* Reset Home content background */
+#home {
+  background: #ffffff;
+}
+
+/* Any section inside home */
+#home section {
+  background: white;
+  color: #1f2937;
+}
+
+.values {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: white;
+  color: #0047ab;
+  padding: 20px 26px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+.subjects-modern {
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.subjects-modern h2 {
+  color: #0047ab;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.subject-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.subject-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.subject-card:hover img {
+  transform: scale(1.08);
+}
+
+/* overlay label */
+.subject-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+#welcome {
+  background: white;
+  color: #1f2937;
+}
+/* ===== HOME MODERN LOOK ===== */
+
+.home-modern {
+  background: white;
+  padding: 60px 20px;
+  color: #1f2937;
+}
+
+.home-modern h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #0047ab;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 20px;
+  max-width: 850px;
+  margin: 0 auto 50px;
+  color: #374151;
+}
+
+/* image + text */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  align-items: center;
+}
+
+.home-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.school-image {
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* staff note */
+.staff-note {
+  text-align: center;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  color: #374151;
+}
+/* Keep existing styles for .subject-card and img */
+/* Subject cards container */
+.subjects-modern {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subjects-modern h2 {
+  font-size: 32px;
+  color: #0047ab;
+  margin-bottom: 30px;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.subject-card {
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Radio buttons hidden */
+.subject-card input {
+  display: none;
+}
+
+/* Summary label (clickable image) */
+.subject-summary {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.subject-summary img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.subject-summary:hover img {
+  transform: scale(1.08);
+}
+
+/* Label overlay */
+.subject-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Subject list hidden by default */
+.subject-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background: #e6f0ff;
+  color: #004080;
+  font-size: 18px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+/* Show subject list when radio checked */
+.subject-card input:checked ~ .subject-list {
+  max-height: 500px; /* adjust depending on content */
+  padding: 20px;
+}
+
+/* Close button styling */
+.close-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #004080;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Grid layout */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== Modern interactive values ===== */
+.values {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+/* Cards */
+.value-card {
+  position: relative;
+  background: white;
+  padding: 20px 28px;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0047ab;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  /* Make them visible immediately */
+  opacity: 1; 
+  transform: translateY(0);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon styling + animation on hover */
+.value-icon {
+  font-size: 28px;
+  transition: transform 0.5s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: rotate(15deg) scale(1.3);
+}
+
+/* Gradient hover + card lift */
+.value-card:hover {
+  background: linear-gradient(135deg, #0a58ca, #0047ab);
+  color: white;
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Animated underline */
+.value-card::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background: white;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.value-card:hover::after {
+  width: 60%;
+}
+/* Make school image responsive and centered on mobile */
+.school-image {
+  display: block;
+  max-width: 80%;
+  height: auto;        
+  margin: 20px auto; /* centers horizontally */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Optional: tweak size for small screens */
+@media (max-width: 768px) {
+  .school-image {
+    max-width: 90%;  /* slightly bigger on mobile */
+    margin: 20px auto; /* ensure always centered */
+  }
+}
+/* ===== HEADER ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #0047ab;
+  position: relative;
+  z-index: 1000;
+}
+
+/* ===== HAMBURGER ICON ===== */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+/* Animate to X */
+#nav-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+#nav-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#nav-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* ===== MOBILE NAV ===== */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-radius: 0 0 20px 20px;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0047ab;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-nav a:hover {
+  background: #f0f8ff;
+}
+
+/* Show mobile menu */
+#nav-toggle:checked ~ .mobile-nav {
+  display: block;
+  animation: slideDown 0.4s ease;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.desktop-nav a {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  background: #0f7fc9;
+  color: #f0f8ff;
+}
+/* ===== ACTIVE DESKTOP TAB ===== */
+.desktop-nav a.active {
+  background: #ffffff;
+  color: #0047ab;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+/* ===== STICKY HEADER ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #0047ab;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+/* Navigation active state */
+.nav-btn.active {
+  color: #2563EB !important;
+  background: rgba(37, 99, 235, 0.1) !important;
+}
+
+.nav-btn.active span {
+  color: #2563EB;
+}
+
+/* Page transitions */
+.page {
+  display: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+.page.active {
+  display: block !important;
+  animation: fadeIn 0.42s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* Ensure home page hero doesn't interfere with other pages */
+#home.page {
+  min-height: 100vh;
+}
+
+#home.page:not(.active) {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ensure other pages are properly isolated */
+.page:not(.active) {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.page.active {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+@keyframes fadeIn {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+.career-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: LEFT;
+  margin-top: 20px;
+}
+
+.career-item {
+  width: 200px;
+  text-align: center;
+}
+
+.career-item img {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.career-item img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  margin-top: 18px;
+  font-weight: 700;
+  color: #0047ab;
+}
+
+.career-info {
+  display: none; /* Hidden initially */
+  text-align: left;
+  background: #e6f0ff;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+
+.career-info a {
+  color: #0047ab;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .career-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .career-item {
+    width: 60%;
+  }
+}
+/* Career gallery layout */
+.career-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: LEFT;
+  margin-top: 20px;
+}
+
+/* Each career card */
+.career-item {
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.career-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-item img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.caption {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #0047ab;
+}
+
+/* Info box styling */
+.career-info {
+  display: none;
+  margin-top: 12px;
+  text-align: left;
+  padding: 12px;
+  background: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.career-info h4 {
+  margin-top: 10px;
+  color: #0a58ca;
+}
+
+.career-info a {
+  color: #0047ab;
+  text-decoration: underline;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .career-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .career-item {
+    width: 60%;
+  }
+}
+.career-item {
+  width: 220px;
+  text-align: center;
+}
+
+.career-item img {
+  width: 100%;
+  height: 160px;           /* SAME HEIGHT */
+  object-fit: cover;       /* Crops nicely without distortion */
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-item img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+}
+.career-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  background: #f0f7ff;
+  border-radius: 14px;
+  margin-top: 10px;
+  padding: 0 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.career-info.open {
+  max-height: 800px; /* enough space */
+  padding: 14px;
+}
+
+.close-info {
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+  color: #0047ab;
+  margin-bottom: 8px;
+}
+.career-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  background: #f0f7ff;
+  border-radius: 14px;
+  margin-top: 10px;
+  padding: 0 14px;
+}
+
+.career-info.open {
+  max-height: 1000px;
+  padding: 14px;
+}
+/* ===== CONTACT MODERN LAYOUT ===== */
+.contact-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.contact-modern-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 24px rgba(0, 71, 171, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 71, 171, 0.25);
+}
+
+.contact-icon {
+  font-size: 36px;
+}
+
+.contact-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #0047ab;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info a {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Subtitle styling */
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-top: 4px;
+}/* Contact Grid */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+/* Individual card */
+.contact-card {
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 71, 171, 0.15);
+  padding: 24px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.contact-icon {
+  font-size: 36px;
+}
+
+.contact-header h3 {
+  font-size: 20px;
+  color: #0047ab;
+  margin: 0;
+  font-weight: 700;
+}
+
+.contact-detail {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-detail a {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-detail a:hover {
+  text-decoration: underline;
+}
+
+/* Subtitle */
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-modern-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.contact-modern-card {
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 71, 171, 0.15);
+  padding: 24px;
+  width: 280px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
+}
+
+.contact-icon {
+  font-size: 36px;
+}
+
+.contact-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0047ab;
+  margin: 0 0 6px 0;
+}
+
+.contact-info p {
+  font-size: 15px;
+  margin: 2px 0;
+  color: #333;
+}
+
+.contact-info a {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Section title & subtitle */
+.section-title {
+  font-size: 28px;
+  color: #0047ab;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-modern-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact-modern-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.contact-modern-card {
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 71, 171, 0.15);
+  padding: 20px;
+  width: 280px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 71, 171, 0.25);
+}
+
+/* Images inside cards */
+.contact-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* maintain aspect ratio */
+}
+
+/* Text */
+.contact-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0047ab;
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 15px;
+  margin: 2px 0;
+  color: #333;
+  text-align: center;
+}
+
+.contact-info a {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Section title & subtitle */
+.section-title {
+  font-size: 28px;
+  color: #0047ab;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-modern-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* =====================================
+   🔥 GLOBAL MOBILE FIX PACK
+   Add this at VERY END of CSS
+===================================== */
+
+@media (max-width: 768px) {
+
+  /* 1️⃣ STOP ALL SIDEWAYS SCROLLING */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 2️⃣ ALL FLEX ROWS STACK */
+  .event-row,
+  .teacher-profile,
+  .home-layout,
+  .career-gallery,
+  .contact-modern-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  /* 3️⃣ REMOVE FIXED HEIGHTS ON MOBILE */
+  .subject-card img,
+  .event-summary,
+  .award-item img,
+  .career-item img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* 4️⃣ MAKE CARDS FULL WIDTH */
+  .teacher-profile,
+  .support-card,
+  .contact-modern-card,
+  .career-item,
+  .subject-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 5️⃣ FIX TEXT SIZES FOR MOBILE */
+  h1 { font-size: 26px !important; }
+  h2 { font-size: 22px !important; }
+  h3 { font-size: 18px !important; }
+  p  { font-size: 15px !important; }
+
+  /* 6️⃣ IMAGES NEVER OVERFLOW */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 7️⃣ NAV SPACING */
+  .mobile-nav a {
+    padding: 14px 20px;
+    font-size: 17px;
+  }
+
+  /* 8️⃣ GALLERIES STACK CLEAN */
+  .event-gallery,
+  .yearbook-gallery,
+  .subjects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
 }

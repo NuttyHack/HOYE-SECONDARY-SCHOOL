@@ -330,25 +330,7 @@
         <p>📄 2022 Yearbook</p>
     </div>
 </div>
-<!-- Performance Teacher Values (bottom-right) -->
-<div class="performance-values">
-    <div class="value-card">
-        <span class="value-icon">🎓</span>
-        Focused Instruction
-    </div>
-    <div class="value-card">
-        <span class="value-icon">📘</span>
-        Curriculum Planning
-    </div>
-    <div class="value-card">
-        <span class="value-icon">💪</span>
-        Extra Tutoring
-    </div>
-    <div class="value-card">
-        <span class="value-icon">🤝</span>
-        Mentorship & Support
-    </div>
-</div>
+
 
     </section>
 
@@ -416,7 +398,7 @@
 
 </section>
     <section id="career-guide" class="tab-content">
-        <section id="career-guide">
+        
   <h2 class="section-title">Career Guide</h2>
   <p class="section-subtitle">
     Explore bursaries, university applications, and financial aid information.
@@ -428,6 +410,9 @@
       <img src="nsfas.jpg" alt="NSFAS Info" onclick="toggleCareerInfo(this)">
       <p class="caption">NSFAS</p>
       <div class="career-info">
+  <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
+
+
         <p>The National Student Financial Aid Scheme (NSFAS) provides financial assistance to eligible students at public universities and TVET colleges in South Africa.</p>
         <h4>Who Qualifies?</h4>
         <ul>
@@ -457,6 +442,7 @@
       <img src="cao.jpg" alt="CAO Info" onclick="toggleCareerInfo(this)">
       <p class="caption">University Applications (CAO)</p>
       <div class="career-info">
+        <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
         <p>The Central Applications Office (CAO) allows students to apply to multiple South African universities using one platform.</p>
         <h4>How to Apply</h4>
         <ol>
@@ -475,6 +461,7 @@
       <img src="UNI.webp" alt="Universities Info" onclick="toggleCareerInfo(this)">
       <p class="caption">Universities Overview</p>
       <div class="career-info">
+        <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
         <ul>
           <li>WITS — <a href="https://www.wits.ac.za" target="_blank">Official Site</a></li>
           <li>UJ — <a href="https://www.uj.ac.za" target="_blank">Official Site</a></li>
@@ -494,37 +481,76 @@
         </ul>
       </div>
     </div>
+</div>
+  </div>
+</section>
+
+<section id="contact" class="tab-content">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-subtitle">
+    Connect with us easily — whether by phone, email, or visiting our school.
+  </p>
+
+  <div class="contact-modern-grid">
+
+    <!-- Call Us -->
+    <div class="contact-modern-card">
+      <img src="call.avif" alt="Phone" class="contact-img">
+      <div class="contact-info">
+        <h4>Call Us</h4>
+        <p>072 307 1712</p>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-modern-card">
+      <img src="email.webp" alt="Email" class="contact-img">
+      <div class="contact-info">
+        <h4>Email</h4>
+        <p><a href="mailto:Hoye.sec@gmail.com">Hoye.sec@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- Visit Us -->
+    <div class="contact-modern-card">
+      <img src="maps.avif" alt="Location" class="contact-img">
+      <div class="contact-info">
+        <h4>Visit Us</h4>
+        <p>
+          <a href="https://maps.app.goo.gl/3S6zuUyJwJraP1tv6" target="_blank">
+           Navigate To Our School
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Postal Address -->
+    <div class="contact-modern-card">
+      <img src="address.jpg" alt="Address" class="contact-img">
+      <div class="contact-info">
+        <h4>Address</h4>
+        <p>Private Bag X1646</p>
+        <p>Bergville</p>
+        <p>3350</p>
+      </div>
+    </div>
 
   </div>
 </section>
-    <section id="contact" class="tab-content">
-    <h2>Contact Us</h2>
-    <p>📞 072 307 1712</p>
 
-    <p><strong>Postal Address:</strong><br>
-        Private Bag X1646<br>
-        Bergville<br>
-        3350
-    </p>
+       <section id="announcements" class="tab-content">
+  <h2 class="section-title">Announcements</h2>
+  <p class="section-subtitle">Stay updated with our latest school events, donations, and farewells.</p>
 
-    <p>📧 <a href="mailto:Hoye.sec@gmail.com">Hoye.sec@gmail.com</a></p>
-
-    <p>📍 <a href="https://maps.app.goo.gl/3S6zuUyJwJraP1tv6" target="_blank">
-        Navigate to Our School
-    </a></p>
-</section>
-       
-<section id="announcements" class="tab-content">
-  <h2>Announcements</h2>
-
-<!-- Announcement 1: Banner Donation -->
-<details class="announcement-box">
-  <summary>
-    <img src="image3.jpg" alt="Teacher Donation">
-    Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary
-  </summary>
-  <p>
-    On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts.
+  <!-- Announcement 1 -->
+  <details class="announcement-box">
+    <summary>
+      <img src="image3.jpg" alt="Teacher Donation">
+      Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary
+    </summary>
+    <div class="announcement-content">
+      <p>
+       On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts.
     One of our most dedicated and long-serving educators, who had been with us through countless years of growth and
     transformation, received an incredible opportunity to work overseas in Dubai.
     <br><br>
@@ -533,29 +559,27 @@
     <br><br>
     We are immensely proud of her journey and wish her all the best as she continues to shine abroad. Her contribution
     and dedication will continue to inspire generations at Hoye Secondary School.
-  </p>
 
-  <div class="announcement-gallery">
-    <a href="image2.jpg" target="_blank">
-      <img src="image2.jpg" alt="School Ceremony">
-    </a>
-    <a href="image3.jpg" target="_blank">
-      <img src="image3.jpg" alt="Banner Reveal">
-    </a>
-    <a href="image4.jpg" target="_blank">
-      <img src="image4.jpg" alt="Staff and Donor">
-    </a>
-  </div>
-</details>
 
-<!-- Announcement 2: Farewell to Teacher 1 -->
-<details class="announcement-box">
-  <summary>
-    <img src="Mhlanga.jpg" alt="Farewell Teacher 1">
-    Miss B.M. Mhlanga – Forever Part of the Hoye Family
-  </summary>
-  <p>
-    For many years,  Miss B.M. Mhlanga has been a pillar of Hoye Secondary School. She did not just teach lessons
+      </p>
+      <div class="announcement-gallery">
+        <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="School Ceremony"></a>
+        <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Banner Reveal"></a>
+        <a href="image4.jpg" target="_blank"><img src="image4.jpg" alt="Staff and Donor"></a>
+      </div>
+    </div>
+  </details>
+
+  <!-- Announcement 2 -->
+  <details class="announcement-box">
+    <summary>
+      <img src="Mhlanga.jpg" alt="Farewell Teacher 1">
+      Miss B.M. Mhlanga – Forever Part of the Hoye Family
+    </summary>
+    <div class="announcement-content">
+      <p>
+        
+For many years,  Miss B.M. Mhlanga has been a pillar of Hoye Secondary School. She did not just teach lessons
     from a book, but shaped lives with her wisdom, care, and unwavering commitment to excellence. Her classroom was a place
     of knowledge, discipline, laughter, and hope, and every learner who walked through those doors left richer than they
     entered.
@@ -567,22 +591,25 @@
     Though we will miss her presence in the corridors, her spirit will live on in the successes of her students and in the
     culture she helped build at Hoye Secondary. We wish her nothing but success, joy, and blessings in her future. She will
     forever remain a part of the Hoye family, and we are so proud to have had her as one of us.
-  </p>
-
-  <div class="announcement-gallery">
-    <a href="Mhlanga.jpg" target="_blank"><img src="Mhlanga.jpg" alt="Farewell Teacher 1"></a>
-  </div>
-</details>
 
 
-<!-- Announcement 3: Farewell to Teacher 2 -->
-<details class="announcement-box">
-  <summary>
-    <img src="Jula.jpg" alt="Farewell Teacher 2">
-    Thank You, Mr. S. Jule – Your Impact Lives On
-  </summary>
-  <p>
-    It is never easy to say goodbye to someone who has given so much of themselves to the school, the learners, and the
+
+      </p>
+      <div class="announcement-gallery">
+        <a href="Mhlanga.jpg" target="_blank"><img src="Mhlanga.jpg" alt="Farewell Teacher 1"></a>
+      </div>
+    </div>
+  </details>
+
+  <!-- Announcement 3 -->
+  <details class="announcement-box">
+    <summary>
+      <img src="Jula.jpg" alt="Farewell Teacher 2">
+      Thank You, Mr. S. Jule – Your Impact Lives On
+    </summary>
+    <div class="announcement-content">
+      <p>
+       It is never easy to say goodbye to someone who has given so much of themselves to the school, the learners, and the
     community. Mr. S. Jule was not only an exceptional educator but also a true guide, shaping futures and building
     character with patience, kindness, and strength.
     <br><br>
@@ -595,14 +622,16 @@
     lasting difference. He will be deeply missed, but his influence and love will forever remain in our hearts. We thank
     him for the many years of dedication, the joy he brought into our school, and the legacy he leaves behind. He is and
     will always be part of the Hoye family.
-  </p>
 
-  <div class="announcement-gallery">
-    <a href="Jula.jpg" target="_blank"><img src="Jula.jpg" alt="Farewell Teacher 2"></a>
-  </div>
-</details>
-  <!-- Add more announcements below  -->
+
+      </p>
+      <div class="announcement-gallery">
+        <a href="Jula.jpg" target="_blank"><img src="Jula.jpg" alt="Farewell Teacher 2"></a>
+      </div>
+    </div>
+  </details>
 </section>
+
 
 <section id="apply-online" class="tab-content">
   <!-- 🔹 Everything we want in PDF goes inside this wrapper -->

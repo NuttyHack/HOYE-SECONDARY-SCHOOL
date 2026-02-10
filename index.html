@@ -430,15 +430,20 @@
         </ol>
       </div>
     </div>
-  </div>
+
 
 
     <!-- CAO -->
-    <div class="career-item">
-      <img src="cao.jpg" alt="CAO Info" onclick="toggleCareerInfo(this)">
-      <p class="caption">University Applications (CAO)</p>
+  <div class="career-item">
+      <input type="checkbox" id="cao-toggle" class="career-toggle">
+
+      <label for="cao-toggle" class="career-label">
+        <img src="cao.jpg" alt="CAO Info">
+        <p class="caption">University Applications (CAO)</p>
+      </label>
+
       <div class="career-info">
-        <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
+        <label for="cao-toggle" class="close-info">✖ Close</label>
         <p>The Central Applications Office (CAO) allows students to apply to multiple South African universities using one platform.</p>
         <h4>How to Apply</h4>
         <ol>
@@ -453,11 +458,16 @@
     </div>
 
     <!-- Universities -->
-    <div class="career-item">
-      <img src="UNI.webp" alt="Universities Info" onclick="toggleCareerInfo(this)">
-      <p class="caption">Universities Overview</p>
+   <div class="career-item">
+      <input type="checkbox" id="uni-toggle" class="career-toggle">
+
+      <label for="uni-toggle" class="career-label">
+        <img src="UNI.webp" alt="Universities Info">
+        <p class="caption">Universities Overview</p>
+      </label>
+
       <div class="career-info">
-        <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
+        <label for="uni-toggle" class="close-info">✖ Close</label>
         <ul>
           <li>WITS — <a href="https://www.wits.ac.za" target="_blank">Official Site</a></li>
           <li>UJ — <a href="https://www.uj.ac.za" target="_blank">Official Site</a></li>

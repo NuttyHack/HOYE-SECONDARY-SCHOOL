@@ -2803,4 +2803,26 @@ html, body {
     border-radius: 14px;
   }
 }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
+.performance-table {
+  width: 100%;
+  min-width: 700px; /* KEY LINE */
+  border-collapse: collapse;
+}
+@media (max-width: 768px) {
+  .table-wrapper {
+    margin: 0 -12px; /* edge-to-edge like modern apps */
+  }
+
+  .performance-table th,
+  .performance-table td {
+    font-size: 13px;
+    padding: 8px;
+    white-space: nowrap;
+  }
+}

@@ -2832,3 +2832,28 @@ html, body {
   color: #666;
   margin-bottom: 6px;
 }
+/* Hidden by default (desktop) */
+.table-hint {
+  display: none;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .table-hint {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin: 4px 0 6px; /* tight spacing */
+  }
+}
+@media (max-width: 768px) {
+  .table-hint {
+    animation: swipeHint 1.5s ease-in-out infinite;
+  }
+
+  @keyframes swipeHint {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+}

@@ -629,7 +629,24 @@ nav a.active {
   padding: 20px;
   animation: fadeIn 0.5s ease;
 }
+.event-info p {
+  max-width: 520px;      /* prevents super-wide ugly lines */
+  line-height: 1.6;
+  font-size: 15.5px;
+  color: #444;
+}
+@media (min-width: 900px) {
+  .event-info p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 900px) {
+  .event-info p {
+    font-size: 16px;
+  }
+}
 
+        
 /* Individual images */
 .award-item {
   flex: 0 0 240px;

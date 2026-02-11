@@ -2804,30 +2804,6 @@ html, body {
     50% { opacity: 1; }
   }
 }
-.career-info {
-  display: none;
-  margin-top: 15px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  animation: fadeIn 0.3s ease;
-}
-
-.career-info.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.career-info {
-  display: none;
-}
-
-input:checked ~ .career-info {
-  display: block;
-}
 .career-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -2839,11 +2815,15 @@ input:checked ~ .career-info {
   text-align: center;
 }
 
-/* Images clickable */
+/* Clickable label wraps image + caption */
+.career-label {
+  display: block;
+  cursor: pointer;
+}
+
 .career-item img {
   width: 100%;
   border-radius: 12px;
-  cursor: pointer;
   transition: transform 0.3s;
 }
 .career-item img:hover {
@@ -2856,7 +2836,7 @@ input:checked ~ .career-info {
   color: #0047ab;
 }
 
-/* Career info box */
+/* Info box hidden by default */
 .career-info {
   max-height: 0;
   overflow: hidden;
@@ -2867,10 +2847,10 @@ input:checked ~ .career-info {
   border-radius: 12px;
 }
 
-/* Show when checkbox is checked */
+/* Show info when checkbox is checked */
 #nsfas-toggle:checked ~ .career-info,
 #cao-toggle:checked ~ .career-info {
-  max-height: 800px; /* enough space for content */
+  max-height: 800px;
   padding: 12px;
 }
 

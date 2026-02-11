@@ -2798,6 +2798,16 @@ html, body {
   text-align: center;
   transition: flex 0.4s ease;
 }
+/* When expanded */
+.career-item:has(input:checked) {
+  flex: 0 0 100%;
+  align-items: flex-start;   /* Align content left */
+}
+
+/* Keep image small when expanded */
+.career-item:has(input:checked) .career-label {
+  width: 200px;
+}
 
 /* Image */
 .career-item img {

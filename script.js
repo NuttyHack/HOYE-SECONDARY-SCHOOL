@@ -19,24 +19,23 @@ function closeGallery(btn) {
       link.classList.add('active');
     });
   });
-  function toggleCareerInfo(img) {
+function toggleCareerInfo(img) {
   const item = img.closest('.career-item');
   const info = item.querySelector('.career-info');
 
-  // Close all other career info sections
+  // Close others
   document.querySelectorAll('.career-info').forEach(el => {
-    if (el !== info) {
-      el.style.display = 'none';
-    }
+    if (el !== info) el.classList.remove('open');
   });
 
   // Toggle current
-  info.style.display = info.style.display === 'block' ? 'none' : 'block';
+  info.classList.toggle('open');
 }
 
 function closeCareerInfo(btn) {
-  btn.closest('.career-info').style.display = 'none';
+  btn.closest('.career-info').classList.remove('open');
 }
+
 .career-info {
   margin-top: 15px;
   padding: 15px;

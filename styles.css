@@ -2273,21 +2273,6 @@ nav a.active {
   font-weight: 700;
   color: #0047ab;
 }
-
-.career-info {
-  display: none; /* Hidden initially */
-  text-align: left;
-  background: #e6f0ff;
-  padding: 12px;
-  border-radius: 12px;
-  margin-top: 6px;
-}
-
-.career-info a {
-  color: #0047ab;
-  text-decoration: underline;
-}
-
 /* Responsive */
 @media screen and (max-width: 768px) {
   .career-gallery {
@@ -2333,28 +2318,6 @@ nav a.active {
   color: #0047ab;
 }
 
-/* Info box styling */
-.career-info {
-  display: none;
-  margin-top: 12px;
-  text-align: left;
-  padding: 12px;
-  background: #f0f8ff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.career-info h4 {
-  margin-top: 10px;
-  color: #0a58ca;
-}
-
-.career-info a {
-  color: #0047ab;
-  text-decoration: underline;
-}
 
 /* Responsive for small screens */
 @media (max-width: 768px) {
@@ -2386,22 +2349,6 @@ nav a.active {
   transform: translateY(-6px);
   box-shadow: 0 16px 30px rgba(0,0,0,0.25);
 }
-.career-info {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.45s ease;
-  background: #f0f7ff;
-  border-radius: 14px;
-  margin-top: 10px;
-  padding: 0 14px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-.career-info.open {
-  max-height: 800px; /* enough space */
-  padding: 14px;
-}
-
 .close-info {
   text-align: right;
   font-weight: bold;

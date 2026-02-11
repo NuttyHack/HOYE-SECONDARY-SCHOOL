@@ -2787,11 +2787,17 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: flex-start;
 }
 
+/* Each career card/item */
 .career-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 200px;
   text-align: center;
+  position: relative;
 }
 
 /* Clickable label wraps image + caption */
@@ -2800,10 +2806,11 @@ html, body {
   cursor: pointer;
 }
 
+/* Thumbnail images */
 .career-item img {
   width: 100%;
   border-radius: 12px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 .career-item img:hover {
   transform: scale(1.05);
@@ -2819,18 +2826,19 @@ html, body {
 .career-info {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   margin-top: 10px;
   padding: 0 12px;
   background: #f0f8ff;
   border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Show info when checkbox is checked */
-#nsfas-toggle:checked ~ .career-info,
-#cao-toggle:checked ~ .career-info {
-  max-height: 800px;
-  padding: 12px;
+.career-item input[type="checkbox"]:checked + .career-label + .career-info {
+  max-height: 1000px;  /* enough height for content */
+  padding: 16px;
 }
 
 /* Close button */
@@ -2841,57 +2849,15 @@ html, body {
   color: #0047ab;
   margin-bottom: 8px;
 }
-.career-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-}
 
-/* Each career card/item */
-.career-item {
-  display: flex;
-  flex-direction: column; /* stack thumbnail + info */
-  align-items: center;
-  width: 200px;   /* thumbnail width */
-  text-align: center;
-  position: relative;
-}
-
-/* Thumbnail images */
-.career-item img {
-  width: 100%;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-/* Info box */
-.career-info {
-  display: none;        /* hidden by default */
-  text-align: left;
-  background: #f0f8ff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  margin-top: 10px;
-  width: 100%;          /* default same width as item */
-}
-
-/* Show info when checkbox is checked or hover (optional) */
-.career-item input[type="checkbox"]:checked ~ .career-info,
-.career-item:hover .career-info {
-  display: block;
-}
-
-/* Desktop: make info wider but still under the item */
+/* Desktop: make info wider but keep it under the item */
 @media screen and (min-width: 769px) {
   .career-item {
-    width: 200px;  /* keep thumbnail small */
+    width: 200px;
   }
-
   .career-item .career-info {
-    width: 400px;        /* wider info box */
-    align-self: flex-start;  /* align to left edge of item */
+    width: 400px;          /* wider info box */
+    align-self: flex-start; /* aligns left of the thumbnail */
   }
 }
 
@@ -2900,7 +2866,6 @@ html, body {
   .career-item {
     width: 60%;
   }
-
   .career-item .career-info {
     width: 100%;
   }

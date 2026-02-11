@@ -2806,7 +2806,7 @@ html, body {
 
 /* Keep image small when expanded */
 .career-item:has(input:checked) .career-label {
-  width: 50px;
+  width: 100px;
 }
 
 /* Image */

@@ -2790,23 +2790,14 @@ html, body {
   align-items: flex-start;
 }
 
-/* Normal card size */
+/* Each card */
 .career-item {
-  flex: 0 0 200px;
+  flex: 0 0 200px; /* 200px normal width */
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  transition: flex 0.4s ease;
-}
-/* When expanded */
-.career-item:has(input:checked) {
-  flex: 0 0 100%;
-  align-items: flex-start;   /* Align content left */
-}
-
-/* Keep image small when expanded */
-.career-item:has(input:checked) .career-label {
-  width: 100px;
+  transition: all 0.4s ease;
 }
 
 /* Image */
@@ -2814,7 +2805,6 @@ html, body {
   width: 100%;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
 .career-item img:hover {
@@ -2827,28 +2817,31 @@ html, body {
   color: #0047ab;
 }
 
-/* Info hidden */
+/* Info hidden by default */
 .career-info {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  transition: all 0.4s ease;
   width: 100%;
+  margin-top: 15px;
+  padding: 0 20px;
   background: #f0f8ff;
   border-radius: 12px;
   box-sizing: border-box;
   text-align: left;
-  padding: 0 20px;
-  margin-top: 15px;
 }
 
-/* Show info */
-.career-item input:checked + .career-label + .career-info {
+/* Show info when checked */
+.career-item input[type="checkbox"]:checked + .career-label + .career-info {
   max-height: 1000px;
   padding: 20px;
 }
 
-.career-item:has(input:checked) {
-  flex: 0 0 40%;
+/* 🔥 THIS IS THE MAGIC PART */
+/* When a card is checked, make that WHOLE item full width */
+.career-item:has(input[type="checkbox"]:checked) {
+  flex: 0 0 100%;
+  align-items: flex-start;
 }
 
 /* Close button */

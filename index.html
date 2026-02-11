@@ -398,11 +398,18 @@
   <div class="career-gallery">
 
   <div class="career-item">
-  <img src="nsfas.jpg" alt="NSFAS Info" onclick="toggleCareerInfo(this)">
-  <p class="caption">NSFAS</p>
+      <!-- Hidden checkbox toggle -->
+      <input type="checkbox" id="nsfas-toggle" hidden>
+      
+      <!-- Label acts as the clickable image -->
+      <label for="nsfas-toggle">
+        <img src="nsfas.jpg" alt="NSFAS Info">
+        <p class="caption">NSFAS</p>
+      </label>
 
-<div class="career-info">
-    <div class="close-info" onclick="closeCareerInfo(this)">✖ Close</div>
+      <!-- Info box -->
+      <div class="career-info">
+        <label for="nsfas-toggle" class="close-info">✖ Close</label>
         <p>The National Student Financial Aid Scheme (NSFAS) provides financial assistance to eligible students at public universities and TVET colleges in South Africa.</p>
         <h4>Who Qualifies?</h4>
         <ul>

@@ -2852,12 +2852,25 @@ html, body {
 
 /* Desktop: make info wider but keep it under the item */
 @media screen and (min-width: 769px) {
-  .career-item {
-    width: 200px;
+
+  .career-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
-  .career-item .career-info {
-    width: 400px;          /* wider info box */
-    align-self: flex-start; /* aligns left of the thumbnail */
+
+  .career-item input[type="checkbox"]:checked + .career-label + .career-info {
+    max-height: none;
   }
 }
 

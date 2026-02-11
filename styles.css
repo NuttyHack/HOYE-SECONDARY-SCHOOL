@@ -2862,3 +2862,26 @@ html, body {
   color: #0047ab;
   margin-bottom: 8px;
 }
+@media screen and (min-width: 769px) {
+  .career-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .career-item {
+    width: 200px; /* item width */
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  /* Info box expands full row on desktop */
+  .career-item .career-info {
+    position: relative;
+    width: 100%;  /* take full width of parent container */
+    left: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}

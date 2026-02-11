@@ -2841,39 +2841,67 @@ html, body {
   color: #0047ab;
   margin-bottom: 8px;
 }
-/* Default for mobile - keep narrow column */
-.career-info {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 12px;
-  padding: 12px;
-  background: #f0f8ff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  display: none; /* Hidden by default */
+.career-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
-/* Desktop layout */
+/* Each career card/item */
+.career-item {
+  display: flex;
+  flex-direction: column; /* stack thumbnail + info */
+  align-items: center;
+  width: 200px;   /* thumbnail width */
+  text-align: center;
+  position: relative;
+}
+
+/* Thumbnail images */
+.career-item img {
+  width: 100%;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* Info box */
+.career-info {
+  display: none;        /* hidden by default */
+  text-align: left;
+  background: #f0f8ff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  width: 100%;          /* default same width as item */
+}
+
+/* Show info when checkbox is checked or hover (optional) */
+.career-item input[type="checkbox"]:checked ~ .career-info,
+.career-item:hover .career-info {
+  display: block;
+}
+
+/* Desktop: make info wider but still under the item */
 @media screen and (min-width: 769px) {
-  .career-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-  }
-
   .career-item {
-    width: 200px;  /* keep items same size */
-    text-align: center;
+    width: 200px;  /* keep thumbnail small */
   }
 
-  /* Make info wider and readable on desktop */
   .career-item .career-info {
-    display: block;       /* show info for testing; toggle with checkbox/hover */
-    width: 400px;         /* wider than item */
-    margin-left: calc(200px + 20px); /* push to the right of the item */
-    text-align: left;
-    padding: 20px;
-    font-size: 15px;
+    width: 400px;        /* wider info box */
+    align-self: flex-start;  /* align to left edge of item */
+  }
+}
+
+/* Mobile: full width under item */
+@media screen and (max-width: 768px) {
+  .career-item {
+    width: 60%;
+  }
+
+  .career-item .career-info {
+    width: 100%;
   }
 }

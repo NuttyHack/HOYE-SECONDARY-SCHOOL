@@ -2806,7 +2806,7 @@ html, body {
 
 /* Keep image small when expanded */
 .career-item:has(input:checked) .career-label {
-  width: 200px;
+  width: 50px;
 }
 
 /* Image */
@@ -2847,9 +2847,8 @@ html, body {
   padding: 20px;
 }
 
-/* ⭐ THIS makes clicked card full width */
 .career-item:has(input:checked) {
-  flex: 0 0 100%;
+  flex: 0 0 40%;
 }
 
 /* Close button */

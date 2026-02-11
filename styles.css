@@ -2787,42 +2787,26 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-/* Each career card/item */
+/* Each card */
 .career-item {
+  flex: 0 0 200px; /* 200px normal width */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
   text-align: center;
-  position: relative;
   transition: all 0.4s ease;
 }
-/* When item is active (checkbox checked) */
-.career-item input[type="checkbox"]:checked ~ .career-info {
-  max-height: 1000px;
-  padding: 16px;
-}
 
-/* Make the whole card expand */
-.career-item:has(input[type="checkbox"]:checked) {
-  flex: 0 0 100%;
-}
-
-/* Clickable label wraps image + caption */
-.career-label {
-  display: block;
-  cursor: pointer;
-}
-
-/* Thumbnail images */
+/* Image */
 .career-item img {
   width: 100%;
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
+
 .career-item img:hover {
   transform: scale(1.05);
 }
@@ -2833,48 +2817,39 @@ html, body {
   color: #0047ab;
 }
 
-/* Info box hidden by default */
+/* Info hidden by default */
 .career-info {
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
+  width: 100%;
   margin-top: 15px;
   padding: 0 20px;
   background: #f0f8ff;
   border-radius: 12px;
-  width: 100%;
   box-sizing: border-box;
+  text-align: left;
 }
-/* Show info when checkbox is checked */
+
+/* Show info when checked */
 .career-item input[type="checkbox"]:checked + .career-label + .career-info {
-  max-height: 1000px;  /* enough height for content */
-  padding: 16px;
+  max-height: 1000px;
+  padding: 20px;
+}
+
+/* 🔥 THIS IS THE MAGIC PART */
+/* When a card is checked, make that WHOLE item full width */
+.career-item:has(input[type="checkbox"]:checked) {
+  flex: 0 0 100%;
+  align-items: flex-start;
 }
 
 /* Close button */
 .close-info {
+  display: block;
   text-align: right;
   cursor: pointer;
   font-weight: bold;
   color: #0047ab;
-  margin-bottom: 8px;
-}
-
-/* Mobile: full width under item */
-@media screen and (max-width: 768px) {
-  .career-item {
-    width: 60%;
-  }
-  .career-item .career-info {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 769px) {
-  .career-item input[type="checkbox"]:checked ~ .career-info::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    z-index: -1;
-  }
+  margin-bottom: 10px;
 }

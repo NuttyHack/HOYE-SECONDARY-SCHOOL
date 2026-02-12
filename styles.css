@@ -2837,11 +2837,11 @@ html, body {
   padding: 20px;
 }
 
-/* 🔥 THIS IS THE MAGIC PART */
+/*  THIS IS THE MAGIC PART */
 /* When a card is checked, make that WHOLE item full width */
 .career-item:has(input[type="checkbox"]:checked) {
-  flex: 0 0 100%;
-  align-items: flex-start;
+  flex: 0 0 80%;
+  align-items: bottom;
 }
 
 /* Close button */

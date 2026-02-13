@@ -1,3 +1,67 @@
+/* Minimal custom styles - Tailwind handles most styling */
+
+/* Navigation active state */
+.nav-btn.active {
+  color: #2563EB !important;
+  background: rgba(37, 99, 235, 0.1) !important;
+}
+
+.nav-btn.active span {
+  color: #2563EB;
+}
+
+/* Page transitions */
+.page {
+  display: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+.page.active {
+  display: block !important;
+  animation: fadeIn 0.42s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* Ensure home page hero doesn't interfere with other pages */
+#home.page {
+  min-height: 100vh;
+}
+
+#home.page:not(.active) {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ensure other pages are properly isolated */
+.page:not(.active) {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.page.active {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+@keyframes fadeIn {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
 
 body {
     font-family: Arial, sans-serif;

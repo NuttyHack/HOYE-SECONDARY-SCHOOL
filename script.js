@@ -1,3 +1,57 @@
+/* ================== SPA NAVIGATION ================== */
+(function () {
+  const navBtns        = Array.from(document.querySelectorAll('.nav-btn'));
+  const pages          = Array.from(document.querySelectorAll('.page'));
+  const mobileLinks    = Array.from(document.querySelectorAll('.mobile-link'));
+  const mobileMenu     = document.getElementById('mobileMenu');
+  const hamburger      = document.getElementById('hamburger');
+  const requestDesktop = document.getElementById('requestProposalDesktop');
+  const requestMobile  = document.getElementById('requestProposalMobile');
+
+  function showPage(id) {
+    pages.forEach(p => p.classList.toggle('active', p.id === id));
+    navBtns.forEach(b => b.classList.toggle('active', b.dataset.target === id));
+
+    if (mobileMenu) {
+      mobileMenu.classList.remove("open");
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  navBtns.forEach(btn =>
+    btn.addEventListener('click', () => showPage(btn.dataset.target))
+  );
+
+  mobileLinks.forEach(ml =>
+    ml.addEventListener('click', () => showPage(ml.dataset.target))
+  );
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", String(!expanded));
+      mobileMenu.classList.toggle("open");
+      mobileMenu.setAttribute("aria-hidden", expanded ? "true" : "false");
+    });
+  }
+
+  if (requestDesktop)
+    requestDesktop.addEventListener('click', () => showPage('contact'));
+  if (requestMobile)
+    requestMobile.addEventListener('click', () => showPage('contact'));
+  // Hero CTA buttons on the home hero
+  const heroCtas = document.querySelectorAll('.hero-ctas .cta');
+  heroCtas.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      if (target) showPage(target);
+    });
+  });
+  showPage('home');
+})();
 function toggleGallery(folder) {
   const gallery = folder.closest('.event-card').querySelector('.event-gallery');
   gallery.classList.toggle('active');

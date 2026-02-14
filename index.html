@@ -1234,6 +1234,41 @@ document.querySelectorAll('input[name="subject_1011"], input[name="subject_12"]'
     </footer>
 
    <script>
+       <script>
+  // Wait for DOM
+  document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('.nav-btn, .mobile-link');
+    const pages = document.querySelectorAll('.page');
+
+    function showPage(targetId) {
+      pages.forEach(page => {
+        if (page.id === targetId) {
+          page.classList.add('active');
+        } else {
+          page.classList.remove('active');
+        }
+      });
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        if (target) showPage(target);
+
+        // For mobile: close menu after click
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu && mobileMenu.classList.contains('block')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('block');
+        }
+      });
+    });
+
+    // Show home by default
+    showPage('home');
+  });
+</script>
+
 function initSignaturePad(canvasId) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext("2d");

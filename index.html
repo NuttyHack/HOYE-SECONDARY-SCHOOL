@@ -332,7 +332,7 @@
     </div>
 </section>
 
-    <section id="performance" class="page">
+    <section id="performances" class="page">
         <h2>Performance</h2>
         <p class="table-hint">⬅ Swipe to view full table ➡</p>
         <div class="table-wrapper">
@@ -1233,21 +1233,6 @@ document.querySelectorAll('input[name="subject_1011"], input[name="subject_12"]'
         <p>© 2026 Hoye Secondary School. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function showTab(tabId) {
-            const allTabs = document.querySelectorAll('.tab-content, #welcome');
-            allTabs.forEach(tab => tab.style.display = 'none');
-
-            const selectedTab = document.getElementById(tabId);
-            if (selectedTab) {
-                selectedTab.style.display = 'block';
-            }
-        }
-
-        window.onload = function() {
-            showTab('welcome');
-        };
-    </script>
    <script>
 function initSignaturePad(canvasId) {
   const canvas = document.getElementById(canvasId);

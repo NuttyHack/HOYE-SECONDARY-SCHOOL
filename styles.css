@@ -104,18 +104,18 @@ nav ul li a {
     font-size: 18px;
 }
 
-#home {
+#welcome {
     text-align: center;
     padding: 50px;
 }
 
-#home h1 {
+#welcome h1 {
     font-size: 32px;
     color: #0047ab;
 }
 
 
-#home p {
+#welcome p {
     font-size: 18px;
     color: #003366;
     max-width: 700px;

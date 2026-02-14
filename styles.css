@@ -2555,22 +2555,6 @@ input:checked ~ .event-gallery {
   }
 
 * Clickable folder header */
-/* ===== EVENT FOLDER COVER (SQUARE) ===== */
-/* ===== EVENT FOLDER COVER (SQUARE) ===== */
-.event-summary {
-  width: 240px;           /* size of folder square */
-  height: 240px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 4px solid #0047ab;  /* default border */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f0f8ff;    /* background for letterbox areas */
-  transition: border-color 0.3s ease, transform 0.35s ease;
-}
 
 /* Hover effect: border light blue */
 .event-summary:hover {
@@ -2581,4 +2565,28 @@ input:checked ~ .event-gallery {
 /* Slight zoom on image hover */
 .event-summary:hover img {
   transform: scale(1.03);
+}
+/* ===== DESKTOP COVER IMAGE CLEAN VERSION ===== */
+.event-summary {
+  flex: 0 0 300px;   /* clean balanced width */
+  position: relative;
+}
+
+.event-summary img {
+  width: 100%;
+  height: 220px;      /* controlled height */
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: all 0.4s ease;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Glow on hover */
+.event-row:hover .event-summary img {
+  transform: scale(1.04);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12),
+    0 0 25px rgba(59, 130, 246, 0.30);
 }

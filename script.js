@@ -60,16 +60,3 @@ function toggleCareerInfo(img) {
 function closeCareerInfo(btn) {
   btn.closest('.career-info').classList.remove('open');
 }
-
-.career-info {
-  margin-top: 15px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 12px;
-}
-
-.close-info {
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 10px;
-}

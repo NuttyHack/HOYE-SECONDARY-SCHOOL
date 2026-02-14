@@ -2784,27 +2784,24 @@ html, body {
 }
 
 /* Images */
-.event-gallery img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.event-gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0 35px;
 }
 
-.event-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+input:checked ~ .event-gallery {
+  max-height: 2000px;
+  padding: 35px;
 }
 
-/* Caption under image */
-.event-gallery .caption {
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  color: #004080;
-  margin-top: 6px;
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
 }
+
 
 /* Close button */
 .close-btn {

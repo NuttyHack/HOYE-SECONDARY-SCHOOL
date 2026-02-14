@@ -2556,15 +2556,15 @@ input:checked ~ .event-gallery {
 
   .event-summary img {
     width: 100%;
-    height: auto;
+    height: 300PX;
   }
 }
 * Clickable folder header */
 /* ===== EVENT FOLDER COVER (SQUARE) ===== */
 /* ===== EVENT FOLDER COVER (SQUARE) ===== */
 .event-summary {
-  width: 320px;           /* size of folder square */
-  height: 320px;
+  width: 240px;           /* size of folder square */
+  height: 240px;
   position: relative;
   overflow: hidden;
   border-radius: 18px;
@@ -2581,15 +2581,6 @@ input:checked ~ .event-gallery {
 .event-summary:hover {
   border-color: #a8d0ff;  /* light blue on hover */
   transform: translateY(-5px);  /* slight lift effect */
-}
-
-/* Full image visible */
-.event-summary img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;     /* show full image without cropping */
-  display: block;
-  transition: transform 0.35s ease;
 }
 
 /* Slight zoom on image hover */

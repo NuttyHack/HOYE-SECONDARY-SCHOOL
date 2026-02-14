@@ -2404,17 +2404,6 @@ html, body {
   align-items: center;
 }
 
-.event-summary {
-  position: relative;
-}
-
-.event-summary img {
-  width: 380px;              /* increased size */
-  height: 260px;             /* taller cover */
-  object-fit: cover;
-  border-radius: 18px;
-  transition: all 0.4s ease;
-
   box-shadow:
     0 15px 40px rgba(0, 0, 0, 0.08),
     0 0 0 rgba(59, 130, 246, 0);
@@ -2532,17 +2521,6 @@ input:checked ~ .event-gallery {
     text-align: center;
   }
 
-  .event-summary img {
-  width: 320px;           /* slightly bigger */
-  height: 400px;           /* IMPORTANT */
-  object-fit: cover;
-  border-radius: 16px;
-  transition: all 0.4s ease;
-}
-.event-summary {
-  position: relative;
-}
-
 .event-summary img {
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.08),
@@ -2585,8 +2563,8 @@ input:checked ~ .event-gallery {
 /* ===== EVENT FOLDER COVER (SQUARE) ===== */
 /* ===== EVENT FOLDER COVER (SQUARE) ===== */
 .event-summary {
-  width: 280px;           /* size of folder square */
-  height: 280px;
+  width: 320px;           /* size of folder square */
+  height: 320px;
   position: relative;
   overflow: hidden;
   border-radius: 18px;

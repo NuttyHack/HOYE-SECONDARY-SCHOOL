@@ -97,3 +97,16 @@ function closeCareerInfo(btn) {
   document.addEventListener('DOMContentLoaded', () => {
     showPage('welcome');
   });
+
+function showTab(id) {
+  // hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+  // show the selected page
+  const page = document.getElementById(id);
+  if (page) page.classList.add('active');
+
+  // optional: close mobile menu if open
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) navToggle.checked = false;
+}

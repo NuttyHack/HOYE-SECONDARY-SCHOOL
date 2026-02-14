@@ -198,20 +198,22 @@
       Our staff includes passionate, energetic, and experienced teachers committed to nurturing young minds.
     </p>
 
-  <section class="subjects-modern">
-  <h2>Subjects Offered</h2>
+  <section class="subjects-modern py-16 bg-slate-50">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-slate-900 mb-12">
+    Subjects Offered
+  </h2>
 
-  <div class="subjects-grid">
+  <div class="subjects-grid flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 max-w-6xl mx-auto">
 
     <!-- Grade 8-9 -->
-    <div class="subject-card">
-      <input type="checkbox" id="grade8-9">
-      <label for="grade8-9" class="subject-summary">
-        <img src="GRADE 8&9.webp" alt="Grade 8 to 9">
-        <div class="subject-label">Grade 8 – 9</div>
+    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+      <input type="checkbox" id="grade8-9" class="peer hidden">
+      <label for="grade8-9" class="subject-summary cursor-pointer flex flex-col items-center p-6">
+        <img src="GRADE 8&9.webp" alt="Grade 8 to 9" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-primary shadow-md">
+        <div class="subject-label text-lg font-semibold text-primary">Grade 8 – 9</div>
       </label>
-      <div class="subject-list">
-        <ul>
+      <div class="subject-list max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 p-6 text-slate-700">
+        <ul class="list-disc list-inside space-y-1">
           <li>Mathematics</li>
           <li>English (FAL)</li>
           <li>IsiZulu (HL)</li>
@@ -220,21 +222,21 @@
           <li>Social Sciences</li>
           <li>Creative Arts</li>
           <li>Technology</li>
-         <li>Economics Management and Science</li>
+          <li>Economics Management and Science</li>
         </ul>
-        <label for="grade8-9" class="close-btn">Close</label>
+        <label for="grade8-9" class="close-btn mt-4 inline-block text-sm text-primary font-medium cursor-pointer hover:underline">Close</label>
       </div>
     </div>
 
     <!-- Grade 10-12 -->
-    <div class="subject-card">
-      <input type="checkbox" id="grade10-12">
-      <label for="grade10-12" class="subject-summary">
-        <img src="GRADE 10&11.webp" alt="Grade 10 to 12">
-        <div class="subject-label">Grade 10 – 12</div>
+    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+      <input type="checkbox" id="grade10-12" class="peer hidden">
+      <label for="grade10-12" class="subject-summary cursor-pointer flex flex-col items-center p-6">
+        <img src="GRADE 10&11.webp" alt="Grade 10 to 12" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-secondary shadow-md">
+        <div class="subject-label text-lg font-semibold text-secondary">Grade 10 – 12</div>
       </label>
-      <div class="subject-list">
-        <ul>
+      <div class="subject-list max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 p-6 text-slate-700">
+        <ul class="list-disc list-inside space-y-1">
           <li>Mathematics</li>
           <li>Mathematical Literacy</li>
           <li>English (FAL)</li>
@@ -246,14 +248,20 @@
           <li>History</li>
           <li>Geography</li>
         </ul>
-        <label for="grade10-12" class="close-btn">Close</label>
+        <label for="grade10-12" class="close-btn mt-4 inline-block text-sm text-secondary font-medium cursor-pointer hover:underline">Close</label>
       </div>
     </div>
 
   </div>
 </section>
 
-</section>
+        <!-- Scroll Indicator -->
+  <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-slate-400 rounded-full flex items-start justify-center p-2">
+      <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+    </div>
+  </div>
+    </section>
 
 
    <section id="event" class="page">

@@ -1,4 +1,7 @@
 /* Minimal custom styles - Tailwind handles most styling */
+.page {
+  padding-top: 7rem;
+}
 
 /* Navigation active state */
 .nav-btn.active {

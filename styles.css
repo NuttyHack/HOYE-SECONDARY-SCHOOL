@@ -2480,11 +2480,11 @@ input:checked ~ .event-gallery {
 .close-btn {
   display: inline-block;
   margin-top: 25px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background: linear-gradient(to right, #3b82f6, #6366f1);
   color: white;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -2500,7 +2500,7 @@ input:checked ~ .event-gallery {
 
   .event-summary img {
   width: 320px;           /* slightly bigger */
-  height: 320px;           /* IMPORTANT */
+  height: 400px;           /* IMPORTANT */
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.4s ease;

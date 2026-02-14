@@ -206,12 +206,16 @@
   <div class="subjects-grid flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 max-w-6xl mx-auto">
 
     <!-- Grade 8-9 -->
-    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
       <input type="checkbox" id="grade8-9" class="peer hidden">
       <label for="grade8-9" class="subject-summary cursor-pointer flex flex-col items-center p-6">
-        <img src="GRADE 8&9.webp" alt="Grade 8 to 9" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-primary shadow-md">
+        <img src="GRADE 8&9.webp" alt="Grade 8 to 9" class="w-32 h-32 object-cover mb-4 border-4 border-primary shadow-md">
         <div class="subject-label text-lg font-semibold text-primary">Grade 8 – 9</div>
+        <div class="click-info mt-2 text-sm text-slate-500 font-medium">
+          Click the image to view subjects offered
+        </div>
       </label>
+
       <div class="subject-list max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 p-6 text-slate-700">
         <ul class="list-disc list-inside space-y-1">
           <li>Mathematics</li>
@@ -224,17 +228,23 @@
           <li>Technology</li>
           <li>Economics Management and Science</li>
         </ul>
-        <label for="grade8-9" class="close-btn mt-4 inline-block text-sm text-primary font-medium cursor-pointer hover:underline">Close</label>
+        <label for="grade8-9" class="close-btn mt-4 inline-block text-sm text-primary font-medium cursor-pointer hover:underline">
+          Close
+        </label>
       </div>
     </div>
 
     <!-- Grade 10-12 -->
-    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+    <div class="subject-card w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
       <input type="checkbox" id="grade10-12" class="peer hidden">
       <label for="grade10-12" class="subject-summary cursor-pointer flex flex-col items-center p-6">
-        <img src="GRADE 10&11.webp" alt="Grade 10 to 12" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-secondary shadow-md">
+        <img src="GRADE 10&11.webp" alt="Grade 10 to 12" class="w-32 h-32 object-cover mb-4 border-4 border-secondary shadow-md">
         <div class="subject-label text-lg font-semibold text-secondary">Grade 10 – 12</div>
+        <div class="click-info mt-2 text-sm text-slate-500 font-medium">
+          Click the image to view subjects offered
+        </div>
       </label>
+
       <div class="subject-list max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 p-6 text-slate-700">
         <ul class="list-disc list-inside space-y-1">
           <li>Mathematics</li>
@@ -248,12 +258,15 @@
           <li>History</li>
           <li>Geography</li>
         </ul>
-        <label for="grade10-12" class="close-btn mt-4 inline-block text-sm text-secondary font-medium cursor-pointer hover:underline">Close</label>
+        <label for="grade10-12" class="close-btn mt-4 inline-block text-sm text-secondary font-medium cursor-pointer hover:underline">
+          Close
+        </label>
       </div>
     </div>
 
   </div>
 </section>
+
 
         <!-- Scroll Indicator -->
   <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">

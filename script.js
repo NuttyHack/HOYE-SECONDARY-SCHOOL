@@ -60,3 +60,40 @@ function toggleCareerInfo(img) {
 function closeCareerInfo(btn) {
   btn.closest('.career-info').classList.remove('open');
 }
+  // Show/hide pages
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+
+  // Desktop navigation
+  document.querySelectorAll('.nav-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-target');
+      showPage(target);
+    });
+  });
+
+  // Mobile navigation
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const target = link.getAttribute('data-target');
+      showPage(target);
+      document.getElementById('mobileMenu').classList.add('hidden');
+      document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    const isExpanded = menu.classList.toggle('hidden');
+    document.getElementById('hamburger').setAttribute('aria-expanded', !isExpanded);
+  });
+
+  // Initialize first page
+  document.addEventListener('DOMContentLoaded', () => {
+    showPage('welcome');
+  });

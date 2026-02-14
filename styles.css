@@ -9,6 +9,11 @@
 .nav-btn.active span {
   color: #2563EB;
 }
+.mobile-link.active {
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.08);
+  border-left: 4px solid #2563EB;
+}
 
 /* Page transitions */
 .page {

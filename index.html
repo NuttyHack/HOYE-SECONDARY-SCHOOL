@@ -1395,6 +1395,19 @@ document.querySelectorAll(".sig-btn").forEach(btn => {
   });
 });
 </script>
+        <script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    const isOpen = !mobileMenu.classList.contains("hidden");
+    hamburger.setAttribute("aria-expanded", isOpen);
+    mobileMenu.setAttribute("aria-hidden", !isOpen);
+  });
+</script>
+
 </body>
 </body>
 

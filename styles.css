@@ -2,8 +2,9 @@
 
 /* Navigation active state */
 .nav-btn.active {
-  color: #2563EB !important;
-  background: rgba(37, 99, 235, 0.1) !important;
+  background: #2563EB;
+  color: white !important;
+  border-radius: 9999px;
 }
 
 .nav-btn.active span {

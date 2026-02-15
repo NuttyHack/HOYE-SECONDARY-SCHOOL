@@ -810,7 +810,10 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 
       <!-- NSFAS -->
-      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+      <div class="career-card group bg-white rounded-3xl border border-slate-200 
+            shadow-lg overflow-hidden transition-all duration-500 
+            hover:shadow-2xl hover:-translate-y-2 hover:border-primary/40">
+
         <img src="nsfas.jpg" class="w-full h-56 object-cover" alt="NSFAS">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-3">NSFAS</h3>
@@ -819,7 +822,7 @@
           </p>
           <button class="toggle-btn text-primary font-semibold">View Details →</button>
 
-          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+        <div class="career-content mt-6 overflow-hidden transition-all duration-500 max-h-0 opacity-0">
             <p><strong>Who Qualifies:</strong></p>
             <ul class="list-disc pl-5 space-y-1">
               <li>South African citizens</li>
@@ -843,7 +846,10 @@
       </div>
 
       <!-- ZABURSARIES -->
-      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+      <div class="career-card group bg-white rounded-3xl border border-slate-200 
+            shadow-lg overflow-hidden transition-all duration-500 
+            hover:shadow-2xl hover:-translate-y-2 hover:border-primary/40">
+
         <img src="zabursaries.jpg" class="w-full h-56 object-cover" alt="ZABursaries">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-3">ZABursaries</h3>
@@ -852,7 +858,7 @@
           </p>
           <button class="toggle-btn text-primary font-semibold">View Details →</button>
 
-          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+          <div class="career-content mt-6 overflow-hidden transition-all duration-500 max-h-0 opacity-0">
             <p>Find updated bursary opportunities for various fields including:</p>
             <ul class="list-disc pl-5 space-y-1">
               <li>Engineering</li>
@@ -869,7 +875,10 @@
       </div>
 
       <!-- CAO -->
-      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+      <div class="career-card group bg-white rounded-3xl border border-slate-200 
+            shadow-lg overflow-hidden transition-all duration-500 
+            hover:shadow-2xl hover:-translate-y-2 hover:border-primary/40">
+
         <img src="cao.jpg" class="w-full h-56 object-cover" alt="CAO">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-3">University Applications (CAO)</h3>
@@ -878,7 +887,7 @@
           </p>
           <button class="toggle-btn text-primary font-semibold">View Details →</button>
 
-          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+         <div class="career-content mt-6 overflow-hidden transition-all duration-500 max-h-0 opacity-0">
             <ol class="list-decimal pl-5 space-y-1">
               <li>Create an account</li>
               <li>Select universities & programmes</li>
@@ -894,7 +903,10 @@
       </div>
 
       <!-- Universities Overview -->
-      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+     <div class="career-card group bg-white rounded-3xl border border-slate-200 
+            shadow-lg overflow-hidden transition-all duration-500 
+            hover:shadow-2xl hover:-translate-y-2 hover:border-primary/40">
+
         <img src="university.jpg" class="w-full h-56 object-cover" alt="Universities">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-3">Universities Overview</h3>
@@ -903,7 +915,7 @@
           </p>
           <button class="toggle-btn text-primary font-semibold">View Details →</button>
 
-          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-2">
+          <div class="career-content mt-6 overflow-hidden transition-all duration-500 max-h-0 opacity-0">
             <ul class="space-y-1">
               <li><a href="https://www.wits.ac.za" target="_blank" class="text-primary underline">WITS</a></li>
               <li><a href="https://www.up.ac.za" target="_blank" class="text-primary underline">UP</a></li>
@@ -1851,6 +1863,49 @@ new Chart(ctx, {
 
 });
 </script>
+<script>
+const buttons = document.querySelectorAll(".toggle-btn");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    const currentCard = button.closest(".career-card");
+    const currentContent = currentCard.querySelector(".career-content");
+
+    // Close all other cards
+    document.querySelectorAll(".career-card").forEach(card => {
+      if (card !== currentCard) {
+        const content = card.querySelector(".career-content");
+        const btn = card.querySelector(".toggle-btn");
+
+        content.style.maxHeight = null;
+        content.classList.remove("opacity-100");
+        content.classList.add("opacity-0");
+        btn.textContent = "View Details →";
+      }
+    });
+
+    // Toggle current card
+    if (currentContent.style.maxHeight) {
+      currentContent.style.maxHeight = null;
+      currentContent.classList.remove("opacity-100");
+      currentContent.classList.add("opacity-0");
+      button.textContent = "View Details →";
+    } else {
+      currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+      currentContent.classList.remove("opacity-0");
+      currentContent.classList.add("opacity-100");
+      button.textContent = "Close ←";
+    }
+
+  });
+});
+</script>
+<style>
+.career-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 100, 255, 0.15);
+}
+</style>
 
 </body>
 </body>

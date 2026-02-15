@@ -619,76 +619,87 @@
 </section>
 
 
-   <section id="learner-support" class="page">
+   <section id="learner-support" class="relative page bg-slate-50 py-24">
   <!-- Background Pattern -->
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-  
-  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 id="talentHeading" class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23000000\" fill-opacity=\"0.02\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
         <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
           Learner Support
         </span>
       </h2>
-      <p class="text-xl text-slate-600 mb-4">Download past papers, revision notes, and study guides to support your learning journey.</p>
-      <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
+        Download past papers, revision notes, and study guides to support your learning journey.
+      </p>
+      <div class="h-1 w-28 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
     </div>
-  <!-- SUPPORT RESOURCES -->
-  <div class="support-cards">
-    <a href="https://www.stanmorephysics.com" target="_blank" class="support-card">
-      <span class="icon">📘</span>
-      <h4>Stanmore Physics</h4>
-      <p>Study Guides & Exam Papers</p>
-    </a>
 
-    <a href="https://www.saexampapers.co.za/" target="_blank" class="support-card">
-      <span class="icon">📝</span>
-      <h4>SA Exam Papers</h4>
-      <p>Grade 12 Question Papers</p>
-    </a>
-  </div>
-
-  <!-- RCL -->
-  <h3 class="rcl-title">Meet Our 2025 Student Leaders</h3>
-
-  <div class="rcl-gallery">
-    <div class="rcl-member">
-      <a href="RCL H.jpg" target="_blank">
-        <img src="RCL H.jpg" alt="Head Boy & Girl">
+    <!-- Support Resources -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <a href="https://www.stanmorephysics.com" target="_blank"
+         class="group flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+        <span class="text-5xl mb-4">📘</span>
+        <h4 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition">Stanmore Physics</h4>
+        <p class="text-slate-600 text-sm">Study Guides & Exam Papers</p>
       </a>
-      <p class="caption">Head Boy & Girl</p>
+
+      <a href="https://www.saexampapers.co.za/" target="_blank"
+         class="group flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition transform hover:-translate-y-2">
+        <span class="text-5xl mb-4">📝</span>
+        <h4 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition">SA Exam Papers</h4>
+        <p class="text-slate-600 text-sm">Grade 12 Question Papers</p>
+      </a>
     </div>
 
-    <div class="rcl-member">
-      <a href="RCL Executive council.jpg" target="_blank">
-        <img src="RCL Executive council.jpg" alt="RCL Executive Council">
-      </a>
-      <p class="caption">Executive Council</p>
+    <!-- RCL Gallery -->
+    <h3 class="text-3xl font-bold text-slate-900 mb-8 text-center">Meet Our 2025 Student Leaders</h3>
+    <div class="grid md:grid-cols-3 gap-8 mb-16 justify-items-center">
+      <div class="group text-center">
+        <a href="RCL H.jpg" target="_blank">
+          <img src="RCL H.jpg" alt="Head Boy & Girl"
+               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
+        </a>
+        <p class="mt-4 font-semibold text-slate-700">Head Boy & Girl</p>
+      </div>
+
+      <div class="group text-center">
+        <a href="RCL Executive council.jpg" target="_blank">
+          <img src="RCL Executive council.jpg" alt="RCL Executive Council"
+               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
+        </a>
+        <p class="mt-4 font-semibold text-slate-700">Executive Council</p>
+      </div>
+
+      <div class="group text-center">
+        <a href="commi.jpg" target="_blank">
+          <img src="commi.jpg" alt="Committee"
+               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
+        </a>
+        <p class="mt-4 font-semibold text-slate-700">Committee</p>
+      </div>
     </div>
 
-    <div class="rcl-member">
-      <a href="commi.jpg" target="_blank">
-        <img src="commi.jpg" alt="Committee">
-      </a>
-      <p class="caption">Committee</p>
+    <!-- Learner Support Values -->
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <span class="text-5xl mb-4 block">🎓</span>
+        <p class="font-semibold text-lg text-slate-800">Guidance & Support</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <span class="text-5xl mb-4 block">💡</span>
+        <p class="font-semibold text-lg text-slate-800">Innovative Teaching</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <span class="text-5xl mb-4 block">🤝</span>
+        <p class="font-semibold text-lg text-slate-800">Mentorship & Care</p>
+      </div>
     </div>
   </div>
-  <!-- Learner Support Values -->
-<div class="learner-values">
-  <div class="value-card">
-    <span class="value-icon">🎓</span>
-    <p>Guidance & Support</p>
-  </div>
-  <div class="value-card">
-    <span class="value-icon">💡</span>
-    <p>Innovative Teaching</p>
-  </div>
-  <div class="value-card">
-    <span class="value-icon">🤝</span>
-    <p>Mentorship & Care</p>
-  </div>
-</div>
-   </section>
+</section>
+
 
 <section id="career-guide" class="page">
   <h2 class="section-title">Career Guide</h2>

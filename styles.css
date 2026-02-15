@@ -2456,69 +2456,82 @@ html, body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* Event Folders */
 #event {
   position: relative;
   padding: 120px 0;
   background: linear-gradient(to bottom right, #f8fafc, #eef2ff);
   overflow: hidden;
 }
-
-.event-folder {
-  border: 2px solid #0047ab;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.event-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  margin-bottom: 50px;
   overflow: hidden;
-  background: #f5faff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.04);
 }
 
-.event-folder[open] {
-  transform: scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
-
-/* Summary (clickable header) */
-.event-folder summary {
+.event-row {
+  display: flex;
+  gap: 40px;
+  padding: 35px;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 16px 20px;
-  list-style: none;
-  position: relative;
-  color: #004080;
-  background: linear-gradient(135deg, #e6f0ff, #f0f8ff);
-  transition: background 0.3s ease;
-  border-bottom: 1px solid #0047ab;
+  align-items: center;
+}
+
+.event-summary img {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
   border-radius: 12px;
+  transition: transform 0.4s ease;
 }
 
-.event-folder summary::marker {
-  display: none; /* hide default marker */
+.event-row:hover img {
+  transform: scale(1.05);
+}
+.event-info h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
 }
 
-/* Arrow indicator */
-.event-folder summary::after {
-  content: "▸";
-  position: absolute;
-  right: 20px;
-  transition: transform 0.3s ease;
+.event-info p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.event-folder[open] summary::after {
-  transform: rotate(90deg);
+.event-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.event-gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0 35px;
 }
 
-/* Event gallery inside folder */
+input:checked ~ .event-gallery {
+  max-height: 2000px;
+  padding: 35px;
+}
+
 .event-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  animation: fadeIn 0.5s ease;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
 }
-
-/* Individual images */
 .award-item {
   text-align: center;
   background: #f8fafc;
@@ -2544,266 +2557,6 @@ html, body {
 .award-item:hover img {
   transform: scale(1.05);
 }
-
-/* Caption */
-.award-item .caption {
-  font-size: 14px;
-  font-weight: 600;
-  color: #004080;
-  text-align: center;
-  margin-top: 6px;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 600px) {
-  .event-gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-  .event-folder summary {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
-}
-/* Container for all event cards (vertical stack) */
-.events-modern {
-  display: flex;
-  flex-direction: column; /* vertical alignment */
-  gap: 25px;
-  padding: 20px 0;
-}
-
-/* Individual event card */
-.event-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-  margin-bottom: 50px;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  border: 1px solid rgba(0,0,0,0.04);
-}
-
-.event-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
-}
-
-
-/* Clickable folder header */
-/* ===== EVENT FOLDER COVER (SQUARE) ===== */
-/* ===== EVENT FOLDER COVER (SQUARE) ===== */
-.event-summary {
-  width: 280px;           /* size of folder square */
-  height: 280px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 4px solid #0047ab;  /* default border */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f0f8ff;    /* background for letterbox areas */
-  transition: border-color 0.3s ease, transform 0.35s ease;
-}
-
-/* Hover effect: border light blue */
-.event-summary:hover {
-  border-color: #a8d0ff;  /* light blue on hover */
-  transform: translateY(-5px);  /* slight lift effect */
-}
-
-/* Full image visible */
-.event-summary img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;     /* show full image without cropping */
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-/* Slight zoom on image hover */
-.event-summary:hover img {
-  transform: scale(1.03);
-}
-
-
-/* Folder label */
-.event-label {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 16px;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.15)
-  );
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.event-label span {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  opacity: 0.9;
-}
-.event-row {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  cursor: pointer;
-}
-.event-info h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
-
-.event-info p {
-  color: #475569;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.event-date {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #3b82f6;
-  margin-bottom: 8px;
-  display: inline-block;
-}
-
-/* Gallery hidden by default */
-.event-gallery {
-  max-height: 0;
-  overflow-x: auto;
-  display: flex;
-  gap: 22px;
-  padding: 0 20px;
-  background: #f5f9ff;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-}
-
-.event-card input:checked ~ .event-gallery {
-  max-height: 320px;
-  padding: 20px;
-}
-
-
-/* Show gallery when folder clicked */
-.event-card input:checked ~ .event-gallery {
-  max-height: 300px; /* adjust for your images */
-  padding: 15px;
-}
-
-/* Individual images inside gallery */
-.event-gallery .award-item {
-  flex: 0 0 220px;   /* fixed width for horizontal row */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* ===== Event row layout (Desktop First) ===== */
-.event-row {
-  display: flex;
-  gap: 40px;
-  padding: 35px;
-  cursor: pointer;
-  align-items: center;
-}
-
-.event-summary img {
-  width: 280px;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.4s ease;
-}
-
-.event-row:hover img {
-  transform: scale(1.05);
-}
-
-/* Event info */
-.event-info {
-  flex: 1;
-  max-width: 600px; /* controls how far text can stretch */
-}
-
-/* Mobile adjustments for event folders & gallery */
-@media screen and (max-width: 768px) {
-
-  /* Event folder container (square) */
-  .event-summary {
-    width: 100%;          /* fill container width */
-    max-width: 100%;      /* remove old limits */
-    aspect-ratio: 1 / 1;  /* maintain square */
-    border-radius: 18px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  /* Event folder image */
-  .event-summary img {
-    width: 100%;          /* fill the folder horizontally */
-    height: 100%;         /* fill folder vertically */
-    object-fit: contain;  /* fit inside without cropping */
-  }
-
-  /* Event gallery images */
-  .event-gallery .award-item {
-    flex: 1 1 100%;       /* full width for each item */
-    max-width: 100%;      /* remove any small limits */
-    margin-bottom: 15px;  /* spacing between items */
-  }
-
-  .event-gallery .award-item img {
-    width: 100%;          /* fill item horizontally */
-    height: auto;         /* scale height automatically */
-    object-fit: contain;  /* entire image visible */
-    border-radius: 12px;
-  }
-}
-
-
-/* Show values when folder is opened */
-.event-card input:checked ~ .event-row .event-values {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Images */
-.event-gallery {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  padding: 0 35px;
-}
-
-input:checked ~ .event-gallery {
-  max-height: 2000px;
-  padding: 35px;
-}
-
-.event-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-}
-
-
-/* Close button */
 .close-btn {
   display: inline-block;
   margin-top: 25px;
@@ -2819,38 +2572,14 @@ input:checked ~ .event-gallery {
 .close-btn:hover {
   opacity: 0.85;
 }
+@media (max-width: 768px) {
+  .event-row {
+    flex-direction: column;
+    text-align: center;
+  }
 
-
-/* Horizontal scroll bar styling */
-.event-gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.event-gallery::-webkit-scrollbar-thumb {
-  background: #0047ab;
-  border-radius: 4px;
-}
-
-.event-gallery::-webkit-scrollbar-track {
-  background: #f0f8ff;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 600px) {
   .event-summary img {
-    width: 60px;
-    height: 60px;
-  }
-  .event-gallery .award-item {
-    flex: 0 0 160px;
-  }
-  .event-gallery img {
-    height: 140px;
+    width: 100%;
+    height: auto;
   }
 }
-@media (max-width: 600px) {
-  .event-summary {
-    max-width: 260px;
-  }
-}
-

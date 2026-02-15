@@ -785,94 +785,139 @@
 </section>
 
 
-<section id="career-guide" class="page">
-  <h2 class="section-title">Career Guide</h2>
-  <p class="section-subtitle">
-    Explore bursaries, university applications, and financial aid information.
-  </p>
+<!-- CAREER GUIDE -->
+<section id="career-guide" class="page py-24 bg-white relative overflow-hidden">
 
-  <div class="career-gallery">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23000000\" fill-opacity=\"0.02\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
 
-    <!-- NSFAS -->
-    <div class="career-item">
-      <!-- Hidden checkbox toggle -->
-      <input type="checkbox" id="nsfas-toggle" hidden>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
 
-      <!-- Label wraps everything clickable -->
-      <label for="nsfas-toggle" class="career-label">
-        <img src="nsfas.jpg" alt="NSFAS Info">
-        <p class="caption">NSFAS</p>
-      </label>
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
+        <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent">
+          Career Guide
+        </span>
+      </h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Explore bursaries, university applications, and financial aid opportunities to help you plan your future.
+      </p>
+      <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>
+    </div>
 
-      <!-- Info box -->
-      <div class="career-info">
-        <label for="nsfas-toggle" class="close-info">✖ Close</label>
-        <p>The National Student Financial Aid Scheme (NSFAS) provides financial assistance to eligible students at public universities and TVET colleges in South Africa.</p>
-        <h4>Who Qualifies?</h4>
-        <ul>
-          <li>South African citizens with household income ≤ R350,000 per year</li>
-          <li>Accepted at a public university or TVET college</li>
-          <li>Students with disabilities ≤ R600,000</li>
-        </ul>
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <!-- NSFAS -->
+      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+        <img src="nsfas.jpg" class="w-full h-56 object-cover" alt="NSFAS">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">NSFAS</h3>
+          <p class="text-slate-600 mb-4">
+            Financial assistance for students at public universities and TVET colleges in South Africa.
+          </p>
+          <button class="toggle-btn text-primary font-semibold">View Details →</button>
+
+          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+            <p><strong>Who Qualifies:</strong></p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>South African citizens</li>
+              <li>Household income ≤ R350,000 per year</li>
+              <li>Accepted at a public university or TVET</li>
+            </ul>
+
+            <p><strong>What NSFAS Covers:</strong></p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Tuition & registration</li>
+              <li>Accommodation</li>
+              <li>Transport allowance</li>
+              <li>Living & book allowance</li>
+            </ul>
+
+            <a href="https://www.nsfas.org.za" target="_blank" class="text-primary font-semibold underline">
+              Visit Official Website
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  <!-- CAO -->
-    <div class="career-item">
-      <input type="checkbox" id="ZAbursaries-toggle" hidden>
-      <label for="ZAbursaries-toggle" class="career-label">
-        <img src="zabursaries-logo.png" alt="ZAbursaries Info">
-        <p class="caption">ZA bursaries</p>
-      </label>
-      <div class="career-info">
-        <label for="ZAbursaries-toggle" class="close-info">✖ Close</label>
-        <p>The Central Applications Office (CAO) allows students to apply to multiple South African universities using one platform.</p>
+
+      <!-- ZABURSARIES -->
+      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+        <img src="zabursaries.jpg" class="w-full h-56 object-cover" alt="ZABursaries">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">ZABursaries</h3>
+          <p class="text-slate-600 mb-4">
+            A platform listing current bursary opportunities across South Africa.
+          </p>
+          <button class="toggle-btn text-primary font-semibold">View Details →</button>
+
+          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+            <p>Find updated bursary opportunities for various fields including:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Engineering</li>
+              <li>Health Sciences</li>
+              <li>Commerce & Accounting</li>
+              <li>Education</li>
+            </ul>
+
+            <a href="https://www.zabursaries.co.za" target="_blank" class="text-primary font-semibold underline">
+              Browse Bursaries
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- CAO -->
-    <div class="career-item">
-      <input type="checkbox" id="cao-toggle" hidden>
-      <label for="cao-toggle" class="career-label">
-        <img src="cao.jpg" alt="CAO Info">
-        <p class="caption">University Applications (CAO)</p>
-      </label>
-      <div class="career-info">
-        <label for="cao-toggle" class="close-info">✖ Close</label>
-        <p>The Central Applications Office (CAO) allows students to apply to multiple South African universities using one platform.</p>
+
+      <!-- CAO -->
+      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+        <img src="cao.jpg" class="w-full h-56 object-cover" alt="CAO">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">University Applications (CAO)</h3>
+          <p class="text-slate-600 mb-4">
+            Apply to multiple universities using one centralized platform.
+          </p>
+          <button class="toggle-btn text-primary font-semibold">View Details →</button>
+
+          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-4">
+            <ol class="list-decimal pl-5 space-y-1">
+              <li>Create an account</li>
+              <li>Select universities & programmes</li>
+              <li>Upload documents</li>
+              <li>Pay application fees</li>
+            </ol>
+
+            <a href="https://www.cao.ac.za" target="_blank" class="text-primary font-semibold underline">
+              Visit CAO Website
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-<!-- Universities -->
-    <div class="career-item">
-      <input type="checkbox" id="universityoverview-toggle" hidden>
-      <label for="universityoverview-toggle" class="career-label">
-        <img src="UNI.webp" alt="university overview">
-        <p class="caption">University Overview</p>
-      </label>
-        
-      <div class="career-info">
-        <label for="universityoverview-toggle" class="close-info">✖ Close</label>
-        <ul>
-          <li>WITS — <a href="https://www.wits.ac.za" target="_blank">Official Site</a></li>
-          <li>UJ — <a href="https://www.uj.ac.za" target="_blank">Official Site</a></li>
-          <li>UP — <a href="https://www.up.ac.za" target="_blank">Official Site</a></li>
-          <li>TUT — <a href="https://www.tut.ac.za" target="_blank">Official Site</a></li>
-          <li>UL — <a href="https://www.ul.ac.za" target="_blank">Official Site</a></li>
-          <li>Stellenbosch — <a href="https://www.sun.ac.za" target="_blank">Official Site</a></li>
-          <li>UFS — <a href="https://www.ufs.ac.za" target="_blank">Official Site</a></li>
-          <li>UMP — <a href="https://www.ump.ac.za" target="_blank">Official Site</a></li>
-          <li>UWC — <a href="https://www.uwc.ac.za" target="_blank">Official Site</a></li>
-          <li>SPU — <a href="https://www.spu.ac.za" target="_blank">Official Site</a></li>
-          <li>NWU — <a href="https://www.nwu.ac.za" target="_blank">Official Site</a></li>
-          <li>SMU — <a href="https://www.smu.ac.za" target="_blank">Official Site</a></li>
-          <li>UCT — <a href="https://www.uct.ac.za" target="_blank">Official Site</a></li>
-          <li>WSU — <a href="https://www.wsu.ac.za" target="_blank">Official Site</a></li>
-          <li>VUT — <a href="https://www.vut.ac.za" target="_blank">Official Site</a></li>
-        </ul>
+
+      <!-- Universities Overview -->
+      <div class="career-card bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
+        <img src="university.jpg" class="w-full h-56 object-cover" alt="Universities">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Universities Overview</h3>
+          <p class="text-slate-600 mb-4">
+            Explore South Africa’s leading universities and their official websites.
+          </p>
+          <button class="toggle-btn text-primary font-semibold">View Details →</button>
+
+          <div class="career-content hidden mt-6 text-sm text-slate-600 space-y-2">
+            <ul class="space-y-1">
+              <li><a href="https://www.wits.ac.za" target="_blank" class="text-primary underline">WITS</a></li>
+              <li><a href="https://www.up.ac.za" target="_blank" class="text-primary underline">UP</a></li>
+              <li><a href="https://www.uct.ac.za" target="_blank" class="text-primary underline">UCT</a></li>
+                <li><a href="https://www.uj.ac.za" target="_blank" class="text-primary underline">UJ</a></li>
+              <li><a href="https://www.nwu.ac.za" target="_blank" class="text-primary underline">NWU</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </div>
-      
   </div>
 </section>
-
 
 <section id="contact" class="page">
   <h2 class="section-title">Contact Us</h2>

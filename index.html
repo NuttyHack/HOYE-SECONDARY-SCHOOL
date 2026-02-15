@@ -460,21 +460,22 @@
 </section>
 
     <section id="performances" class="page">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-  
+         <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23000000\" fill-opacity=\"0.02\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+
   <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-9">
-    <div class="text-center mb-16">
+    <!-- Header -->
+    <div class="text-center mb-20"> <!-- increased margin-bottom -->
       <h2 id="servicesHeading" class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
         <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
           Academic Performance Overview
         </span>
       </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
-  A record of academic excellence showcasing our matric results, learner achievement, and steady progress over the years.
-</p>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-8"> <!-- increased mb -->
+        A record of academic excellence showcasing our matric results, learner achievement, and steady progress over the years.
+      </p>
       <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
     </div>
-
      <!-- Table Hint -->
 <p class="table-hint text-center text-sm text-slate-500 mb-4">⬅ Swipe to view full table ➡</p>
 
@@ -562,28 +563,31 @@
         <h3 class="text-2xl font-bold text-slate-900 mt-16 mb-4">
   📚 School Yearbooks & Academic Reports
 </h3>
-<p class="text-slate-600 mb-8">
-  Explore our official yearbooks and academic summaries. Click on a cover below to view the full PDF document.
-</p>
-<div class="yearbook-gallery grid md:grid-cols-2 gap-5">
-  <div class="yearbook-item group text-center">
-    <a href="yearbook_2021.pdf" target="_blank">
-      <img src="yearbook_2021.jpeg" 
-           class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2"
-           alt="2021 Yearbook">
-    </a>
-    <p class="mt-4 font-semibold text-slate-700">📄 2021 Yearbook</p>
-  </div>
+      <!-- Yearbook Section -->
+    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center">Download/View the Yearbook</h3>
+    <p class="text-center text-slate-500 mb-8">Click on the image to view the full gradebook PDF</p>
 
-  <div class="yearbook-item group text-center">
-    <a href="yearbook_2022.pdf" target="_blank">
-      <img src="yearbook_2022.jpeg" 
-           class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2"
-           alt="2022 Yearbook">
-    </a>
-    <p class="mt-4 font-semibold text-slate-700">📄 2022 Yearbook</p>
-  </div>
-</div>
+    <div class="yearbook-gallery grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 justify-items-center">
+      <!-- Yearbook 2021 -->
+      <div class="yearbook-item group text-center">
+        <a href="yearbook_2021.pdf" target="_blank">
+          <img src="yearbook_2021.jpeg" 
+               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[300px]"
+               alt="2021 Yearbook">
+        </a>
+        <p class="mt-4 font-semibold text-slate-700">📄 2021 Yearbook</p>
+      </div>
+
+      <!-- Yearbook 2022 -->
+      <div class="yearbook-item group text-center">
+        <a href="yearbook_2022.pdf" target="_blank">
+          <img src="yearbook_2022.jpeg" 
+               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[300px]"
+               alt="2022 Yearbook">
+        </a>
+        <p class="mt-4 font-semibold text-slate-700">📄 2022 Yearbook</p>
+      </div>
+    </div>
 <!-- Pass Rate Growth Chart -->
 <div class="mt-20 text-center">
   <h3 class="text-3xl font-bold text-slate-900 mb-4">

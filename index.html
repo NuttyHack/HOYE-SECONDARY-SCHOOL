@@ -553,19 +553,17 @@
   </p>
 
   <!-- Chart Container -->
-  <div class="bg-white p-10 rounded-3xl shadow-2xl border border-slate-200 relative overflow-hidden">
-
-    <!-- Soft Glow Background -->
-    <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-primary/20 blur-3xl opacity-40 rounded-full"></div>
-
-    <canvas id="passRateChart" height="100"></canvas>
-
-  </div>
+<div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl border border-slate-200 relative overflow-hidden">
 </div>
+  <!-- Soft Glow -->
+  <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-primary/20 blur-3xl opacity-40 rounded-full"></div>
 
-  <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-200">
-    <canvas id="passRateChart" height="100"></canvas>
+  <!-- Responsive Chart Wrapper -->
+  <div class="relative w-full h-[300px] md:h-[400px]">
+    <canvas id="passRateChart"></canvas>
   </div>
+
+</div>
 </div>
 
       
@@ -1589,7 +1587,9 @@ gradient.addColorStop(1, "rgba(59,130,246,0.05)");
 new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    labels: window.innerWidth < 600
+  ? ['17','18','19','20','21','22','23','24','25']
+  : ['2017','2018','2019','2020','2021','2022','2023','2024','2025'],
     datasets: [{
       data: [90.4,77.4,79.7,77.2,84.2,89.3,89.8,92.6,92],
       borderColor: '#3b82f6',
@@ -1614,33 +1614,43 @@ new Chart(ctx, {
     }]
   },
   options: {
-    responsive: true,
-    animation: {
-      duration: 2500,
-      easing: 'easeOutQuart'
-    },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return context.parsed.y + "% Pass Rate";
-          }
+  options: {
+  responsive: true,
+  maintainAspectRatio: false, // 🔥 THIS FIXES SQUEEZING
+  animation: {
+    duration: 2000,
+    easing: 'easeOutQuart'
+  },
+  plugins: {
+    legend: { display: false },
+    tooltip: {
+      callbacks: {
+        label: function(context) {
+          return context.parsed.y + "% Pass Rate";
         }
       }
+    }
+  },
+  scales: {
+    x: {
+      ticks: {
+        autoSkip: true,
+        maxRotation: 0,
+        minRotation: 0
+      }
     },
-    scales: {
-      y: {
-        min: 70,
-        max: 100,
-        ticks: {
-          callback: function(value) {
-            return value + '%';
-          }
+    y: {
+      min: 70,
+      max: 100,
+      ticks: {
+        callback: function(value) {
+          return value + '%';
         }
       }
     }
   }
+}
+
 });
 </script>
 

@@ -1296,6 +1296,19 @@
 
 <section id="apply-online" class="page">
   <!-- 🔹 Everything we want in PDF goes inside this wrapper -->
+    <!-- Overlay for Applications Closed -->
+<div id="apply-overlay" style="
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6) url('closed.png') no-repeat center center;
+  background-size: contain;
+  z-index: 1000;
+  border-radius: 20px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+"></div>
+
   <div id="application-wrapper" style="padding:20px; background:#fff;">
 
     <!-- Letterhead -->
@@ -2142,6 +2155,37 @@ buttons.forEach(button => {
     button.textContent = content.classList.contains('hidden') ? 'Read More' : 'Show Less';
   }
 </script>
+      <script>
+  const overlay = document.getElementById('apply-overlay');
+
+  // Select all apply/download buttons
+  const applyButtons = document.querySelectorAll('#apply-online .download-buttons button, #apply-online details summary');
+
+  applyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Show overlay
+      overlay.style.display = 'block';
+      overlay.style.opacity = '0';
+      setTimeout(() => overlay.style.opacity = '1', 10);
+
+      // Hide after 6 seconds
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 300); // match transition
+      }, 6000);
+    });
+  });
+          #apply-overlay {
+  animation: popOverlay 0.5s ease forwards;
+}
+
+@keyframes popOverlay {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+</script>
+
 </body>
 </body>
 

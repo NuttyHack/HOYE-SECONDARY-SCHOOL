@@ -2495,3 +2495,6 @@ input:checked ~ .event-gallery {
   );
   border-radius: 10px;
 }
+#contact {
+  padding-top: 100px; /* space for fixed navbar */
+}

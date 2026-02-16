@@ -1218,16 +1218,17 @@
       <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
     </div>
 
-    <!-- Announcement Cards -->
-    <div class="flex flex-col space-y-8">
-
+    <!-- Announcement Cards Grid -->
+    <div class="grid gap-8 justify-center">
+      <!-- Each card will max out at 600px wide on desktop -->
+      
       <!-- Announcement 1 -->
-      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
-        <img src="image3.jpg" alt="Teacher Donation" class="w-full h-64 object-cover">
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
+        <img src="image3.jpg" alt="Teacher Donation" class="w-full h-64 md:h-72 lg:h-64 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary</h3>
           <p class="text-slate-600 line-clamp-3">
-            On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts. One of our most dedicated educators received an incredible opportunity to work overseas in Dubai. Despite her departure, she made an unforgettable gesture by donating a professionally designed banner to the school…
+            On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts...
           </p>
           <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
             Read More
@@ -1246,19 +1247,19 @@
       </div>
 
       <!-- Announcement 2 -->
-      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
-        <img src="Mhlanga.jpg" alt="Farewell Teacher 1" class="w-full h-64 object-cover">
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
+        <img src="Mhlanga.jpg" alt="Farewell Teacher 1" class="w-full h-64 md:h-72 lg:h-64 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Miss B.M. Mhlanga – Forever Part of the Hoye Family</h3>
           <p class="text-slate-600 line-clamp-3">
-            For many years, Miss B.M. Mhlanga shaped lives with wisdom, care, and commitment. Her classroom was a place of knowledge, discipline, laughter, and hope. Every learner who walked through those doors left richer than they entered…
+            For many years, Miss B.M. Mhlanga shaped lives with wisdom, care, and commitment...
           </p>
           <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
             Read More
           </button>
           <div class="announcement-content mt-4 hidden text-slate-700 space-y-3">
             <p>
-              Her impact went far beyond academics. She uplifted learners and the community. We are grateful for the sacrifices she made and the love she poured into her students. She will always remain a cherished member of the Hoye family.
+              Her impact went far beyond academics. She uplifted learners and the community. She will always remain a cherished member of the Hoye family.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
               <a href="Mhlanga.jpg" target="_blank"><img src="Mhlanga.jpg" alt="Farewell Teacher 1" class="w-full h-24 object-cover rounded-lg"></a>
@@ -1268,19 +1269,19 @@
       </div>
 
       <!-- Announcement 3 -->
-      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
-        <img src="Jula.jpg" alt="Farewell Teacher 2" class="w-full h-64 object-cover">
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
+        <img src="Jula.jpg" alt="Farewell Teacher 2" class="w-full h-64 md:h-72 lg:h-64 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Thank You, Mr. S. Jule – Your Impact Lives On</h3>
           <p class="text-slate-600 line-clamp-3">
-            Saying goodbye to someone who has given so much to the school and learners is never easy. Mr. S. Jule shaped futures and built character with patience, kindness, and strength…
+            Saying goodbye to someone who has given so much to the school and learners is never easy...
           </p>
           <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
             Read More
           </button>
           <div class="announcement-content mt-4 hidden text-slate-700 space-y-3">
             <p>
-              His tireless dedication ensured no learner was left behind. His influence and love will forever remain in our hearts. He leaves a legacy of confidence, values, and achievement for all Hoye learners.
+              His tireless dedication ensured no learner was left behind. His influence and love will forever remain in our hearts.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
               <a href="Jula.jpg" target="_blank"><img src="Jula.jpg" alt="Farewell Teacher 2" class="w-full h-24 object-cover rounded-lg"></a>
@@ -1289,11 +1290,9 @@
         </div>
       </div>
 
-    </div> <!-- End announcement cards -->
-
+    </div>
   </div>
 </section>
-
 
 <section id="apply-online" class="page">
   <!-- 🔹 Everything we want in PDF goes inside this wrapper -->

@@ -2151,36 +2151,31 @@ buttons.forEach(button => {
     button.textContent = content.classList.contains('hidden') ? 'Read More' : 'Show Less';
   }
 </script>
-      <script>
-  const overlay = document.getElementById('apply-overlay');
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  // Select all apply/download buttons
-  const applyButtons = document.querySelectorAll('#apply-online .download-buttons button, #apply-online details summary');
+  const overlay = document.getElementById("apply-overlay");
 
-  applyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Show overlay
-      overlay.style.display = 'block';
-      overlay.style.opacity = '0';
-      setTimeout(() => overlay.style.opacity = '1', 10);
+  function showOverlay() {
+    overlay.style.opacity = "1";
 
-      // Hide after 6 seconds
-      setTimeout(() => {
-        overlay.style.opacity = '0';
-        setTimeout(() => overlay.style.display = 'none', 300); // match transition
-      }, 6000);
-    });
+    setTimeout(() => {
+      overlay.style.opacity = "0";
+    }, 6000);
+  }
+
+  // Buttons
+  const buttons = document.querySelectorAll(
+    "#apply-online .download-buttons button, #apply-online details summary"
+  );
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", showOverlay);
   });
-          #apply-overlay {
-  animation: popOverlay 0.5s ease forwards;
-}
 
-@keyframes popOverlay {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
+});
 </script>
+
 
 </body>
 </body>

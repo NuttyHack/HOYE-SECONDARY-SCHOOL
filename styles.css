@@ -2498,3 +2498,9 @@ input:checked ~ .event-gallery {
 #contact {
   padding-top: 100px; /* space for fixed navbar */
 }
+#career-guide {
+  padding-top: 100px; /* space for fixed navbar */
+}
+#learner-support {
+  padding-top: 100px; /* space for fixed navbar */
+}

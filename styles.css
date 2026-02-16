@@ -2538,3 +2538,10 @@ input:checked ~ .event-gallery {
   border-radius: 999px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center everything */
+  gap: 20px;
+  margin-top: 30px;
+}

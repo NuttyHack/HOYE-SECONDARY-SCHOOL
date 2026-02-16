@@ -566,32 +566,47 @@
       </table>
     </div>
 
-    <!-- Yearbook Section -->
-    <h3 class="text-2xl font-bold text-slate-900 mb-4 text-center">📚 School Yearbooks & Reports</h3>
-    <p class="text-center text-slate-500 mb-8">Click on the image to view the full gradebook PDF</p>
+   <!-- Yearbook Gallery -->
+    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">
+      📚 School Yearbooks & Reports
+    </h3>
+    <p class="text-center text-slate-500 mb-12">
+      Click on the image to view the full gradebook PDF
+    </p>
 
-    <div class="yearbook-gallery grid md:grid-cols-2 gap-6 justify-items-center mb-20">
+    <div class="yearbook-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+
       <!-- Yearbook 2021 -->
-      <div class="yearbook-item group text-center">
+      <div class="yearbook-item group relative w-full max-w-xs">
         <a href="yearbook_2021.pdf" target="_blank">
-          <img src="yearbook_2021.jpeg" 
-               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[300px]"
-               alt="2021 Yearbook">
+          <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
+            <img src="yearbook_2021.jpeg" 
+                 class="w-full h-64 object-cover"
+                 alt="2021 Yearbook">
+            <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-50 bg-gradient-to-r from-primary to-secondary transition"></div>
+          </div>
         </a>
-        <p class="mt-4 font-semibold text-slate-700">📄 2021 Yearbook</p>
+        <p class="mt-4 font-semibold text-slate-700 text-center">📄 2021 Yearbook</p>
       </div>
 
       <!-- Yearbook 2022 -->
-      <div class="yearbook-item group text-center">
+      <div class="yearbook-item group relative w-full max-w-xs">
         <a href="yearbook_2022.pdf" target="_blank">
-          <img src="yearbook_2022.jpeg" 
-               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[300px]"
-               alt="2022 Yearbook">
+          <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
+            <img src="yearbook_2022.jpeg" 
+                 class="w-full h-64 object-cover"
+                 alt="2022 Yearbook">
+            <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-50 bg-gradient-to-r from-primary to-secondary transition"></div>
+          </div>
         </a>
-        <p class="mt-4 font-semibold text-slate-700">📄 2022 Yearbook</p>
+        <p class="mt-4 font-semibold text-slate-700 text-center">📄 2022 Yearbook</p>
       </div>
+
+      <!-- Add more yearbooks the same way -->
+
     </div>
 
+  </div>
     <!-- Academic Badge -->
     <div class="flex justify-center mb-12">
       <div class="relative inline-flex items-center justify-center px-10 py-5 text-white font-bold text-sm md:text-base tracking-wide uppercase">

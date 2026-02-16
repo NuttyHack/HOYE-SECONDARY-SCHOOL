@@ -1199,112 +1199,99 @@
 
 </section>
 
+<section id="announcements" class="page py-24 bg-white relative overflow-hidden">
 
-
-   <section id="announcements" class="page py-24 bg-white relative overflow-hidden" aria-labelledby="industriesHeading">
   <!-- Background Pattern -->
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-  
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23000000\" fill-opacity=\"0.02\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 id="announcementsHeading" class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
+      <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
         <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
           Announcements
         </span>
       </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-4">Stay updated with our latest school news.</p>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
+        Stay updated with our latest school news.
+      </p>
       <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
     </div>
+
+    <!-- Announcement Cards -->
+    <div class="flex flex-col space-y-8">
+
+      <!-- Announcement 1 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <img src="image3.jpg" alt="Teacher Donation" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary</h3>
+          <p class="text-slate-600 line-clamp-3">
+            On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts. One of our most dedicated educators received an incredible opportunity to work overseas in Dubai. Despite her departure, she made an unforgettable gesture by donating a professionally designed banner to the school…
+          </p>
+          <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
+            Read More
+          </button>
+          <div class="announcement-content mt-4 hidden text-slate-700 space-y-3">
+            <p>
+              Her contribution and dedication will continue to inspire generations at Hoye Secondary School. The banner symbolizes her appreciation and bond with the school community. We wish her all the best as she continues to shine abroad.
+            </p>
+            <div class="grid grid-cols-3 gap-2">
+              <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="School Ceremony" class="w-full h-24 object-cover rounded-lg"></a>
+              <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Banner Reveal" class="w-full h-24 object-cover rounded-lg"></a>
+              <a href="image4.jpg" target="_blank"><img src="image4.jpg" alt="Staff and Donor" class="w-full h-24 object-cover rounded-lg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcement 2 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <img src="Mhlanga.jpg" alt="Farewell Teacher 1" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Miss B.M. Mhlanga – Forever Part of the Hoye Family</h3>
+          <p class="text-slate-600 line-clamp-3">
+            For many years, Miss B.M. Mhlanga shaped lives with wisdom, care, and commitment. Her classroom was a place of knowledge, discipline, laughter, and hope. Every learner who walked through those doors left richer than they entered…
+          </p>
+          <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
+            Read More
+          </button>
+          <div class="announcement-content mt-4 hidden text-slate-700 space-y-3">
+            <p>
+              Her impact went far beyond academics. She uplifted learners and the community. We are grateful for the sacrifices she made and the love she poured into her students. She will always remain a cherished member of the Hoye family.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <a href="Mhlanga.jpg" target="_blank"><img src="Mhlanga.jpg" alt="Farewell Teacher 1" class="w-full h-24 object-cover rounded-lg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcement 3 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <img src="Jula.jpg" alt="Farewell Teacher 2" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Thank You, Mr. S. Jule – Your Impact Lives On</h3>
+          <p class="text-slate-600 line-clamp-3">
+            Saying goodbye to someone who has given so much to the school and learners is never easy. Mr. S. Jule shaped futures and built character with patience, kindness, and strength…
+          </p>
+          <button class="mt-4 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:scale-105 transition-transform" onclick="toggleAnnouncementContent(this)">
+            Read More
+          </button>
+          <div class="announcement-content mt-4 hidden text-slate-700 space-y-3">
+            <p>
+              His tireless dedication ensured no learner was left behind. His influence and love will forever remain in our hearts. He leaves a legacy of confidence, values, and achievement for all Hoye learners.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <a href="Jula.jpg" target="_blank"><img src="Jula.jpg" alt="Farewell Teacher 2" class="w-full h-24 object-cover rounded-lg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End announcement cards -->
+
   </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="industryGrid">
-  <!-- Announcement 1 -->
-  <details class="announcement-box">
-    <summary>
-      <img src="image3.jpg" alt="Teacher Donation">
-      Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary
-    </summary>
-    <div class="announcement-content">
-      <p>
-       On the 22nd of October 2024, Hoye Secondary School celebrated a moment that will forever remain close to our hearts.
-    One of our most dedicated and long-serving educators, who had been with us through countless years of growth and
-    transformation, received an incredible opportunity to work overseas in Dubai.
-    <br><br>
-    Despite her departure, she made an unforgettable gesture of gratitude by donating a professionally designed banner
-    to the school — a symbolic token of her appreciation and her bond with the school community.
-    <br><br>
-    We are immensely proud of her journey and wish her all the best as she continues to shine abroad. Her contribution
-    and dedication will continue to inspire generations at Hoye Secondary School.
-
-
-      </p>
-      <div class="announcement-gallery">
-        <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="School Ceremony"></a>
-        <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Banner Reveal"></a>
-        <a href="image4.jpg" target="_blank"><img src="image4.jpg" alt="Staff and Donor"></a>
-      </div>
-    </div>
-  </details>
-
-  <!-- Announcement 2 -->
-  <details class="announcement-box">
-    <summary>
-      <img src="Mhlanga.jpg" alt="Farewell Teacher 1">
-      Miss B.M. Mhlanga – Forever Part of the Hoye Family
-    </summary>
-    <div class="announcement-content">
-      <p>
-        
-For many years,  Miss B.M. Mhlanga has been a pillar of Hoye Secondary School. She did not just teach lessons
-    from a book, but shaped lives with her wisdom, care, and unwavering commitment to excellence. Her classroom was a place
-    of knowledge, discipline, laughter, and hope, and every learner who walked through those doors left richer than they
-    entered.
-    <br><br>
-    As she takes on a new journey, we want her to know that her impact goes far beyond academics. She uplifted our school,
-    inspired our learners, and touched the community in a way that words can hardly capture. We are deeply grateful for the
-    sacrifices she made, the time she gave, and the love she poured into every learner she taught.
-    <br><br>
-    Though we will miss her presence in the corridors, her spirit will live on in the successes of her students and in the
-    culture she helped build at Hoye Secondary. We wish her nothing but success, joy, and blessings in her future. She will
-    forever remain a part of the Hoye family, and we are so proud to have had her as one of us.
-
-
-
-      </p>
-      <div class="announcement-gallery">
-        <a href="Mhlanga.jpg" target="_blank"><img src="Mhlanga.jpg" alt="Farewell Teacher 1"></a>
-      </div>
-    </div>
-  </details>
-
-  <!-- Announcement 3 -->
-  <details class="announcement-box">
-    <summary>
-      <img src="Jula.jpg" alt="Farewell Teacher 2">
-      Thank You, Mr. S. Jule – Your Impact Lives On
-    </summary>
-    <div class="announcement-content">
-      <p>
-       It is never easy to say goodbye to someone who has given so much of themselves to the school, the learners, and the
-    community. Mr. S. Jule was not only an exceptional educator but also a true guide, shaping futures and building
-    character with patience, kindness, and strength.
-    <br><br>
-    Over the years, she dedicated herself tirelessly to his learners, always ensuring that no one was left behind. He was
-    there to celebrate achievements, to encourage during challenges, and to offer guidance in moments of doubt. His role in
-    the growth of Hoye Secondary cannot be measured — it will always be felt in the confidence, values, and achievements of
-    her learners.
-    <br><br>
-    As he moves forward into the next stage of her life, we want her to carry with her the knowledge that he has made a
-    lasting difference. He will be deeply missed, but his influence and love will forever remain in our hearts. We thank
-    him for the many years of dedication, the joy he brought into our school, and the legacy he leaves behind. He is and
-    will always be part of the Hoye family.
-
-
-      </p>
-      <div class="announcement-gallery">
-        <a href="Jula.jpg" target="_blank"><img src="Jula.jpg" alt="Farewell Teacher 2"></a>
-      </div>
-    </div>
-  </details>
 </section>
 
 
@@ -2135,7 +2122,15 @@ buttons.forEach(button => {
   box-shadow: 0 20px 50px rgba(0, 100, 255, 0.15);
 }
 </style>
-
+<script>
+  // Toggle "Read More" content
+  function toggleAnnouncementContent(button) {
+    const card = button.closest('.group');
+    const content = card.querySelector('.announcement-content');
+    content.classList.toggle('hidden');
+    button.textContent = content.classList.contains('hidden') ? 'Read More' : 'Show Less';
+  }
+</script>
 </body>
 </body>
 

@@ -1318,17 +1318,23 @@
   <!-- Separator -->
   <hr style="margin-top: 15px; border: 0; height: 3px; background: linear-gradient(to right, #004080, #0073e6); border-radius: 2px; width: 60%;">
 </div>
-   <!-- Overlay for Applications Closed -->
-<div id="apply-overlay" style="
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65) url('closed.png') center center no-repeat;
-  background-size: contain;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-"></div>
+  <div id="application-closed-message" style="
+  display: none;
+  background: linear-gradient(135deg, #ffeded, #ffe5e5);
+  color: #990000;
+  border-left: 5px solid #ff1a1a;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(255,0,0,0.1);
+  transition: opacity 0.3s ease;
+">
+  🚫 Applications for 2026 are closed.  
+  Please visit the <strong>Announcements</strong> section for more information.
+</div>
+
     <div id="apply-online-cards">
   <!-- Card 1: Code of Conduct -->
   <details>
@@ -2151,32 +2157,33 @@ buttons.forEach(button => {
     button.textContent = content.classList.contains('hidden') ? 'Read More' : 'Show Less';
   }
 </script>
-    <script>
+   <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const overlay = document.getElementById("apply-overlay");
+  const message = document.getElementById("application-closed-message");
 
-  function showOverlay() {
-    overlay.style.opacity = "1";
-
-    setTimeout(() => {
-      overlay.style.opacity = "0";
-    }, 6000);
-  }
-
-  // Buttons
-  const buttons = document.querySelectorAll(
-    "#apply-online .download-buttons button, #apply-online details summary"
+  // Select everything clickable inside Apply Online
+  const clickableItems = document.querySelectorAll(
+    "#apply-online button, #apply-online details summary"
   );
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", showOverlay);
+  clickableItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();   // stop default action
+      e.stopPropagation();  // stop opening details
+
+      message.style.display = "block";
+
+      // Auto hide after 5 seconds (optional)
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 5000);
+    });
   });
 
 });
 </script>
-
-
+ 
 </body>
 </body>
 

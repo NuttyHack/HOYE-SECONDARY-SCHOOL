@@ -2040,6 +2040,26 @@ document.querySelectorAll(".sig-btn").forEach(btn => {
   });
 });
 </script>
+
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // 1. Open/Close the menu when clicking the hamburger button
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // 2. AUTO-CLOSE magic: When ANY mobile link is clicked, hide the menu
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // This forces the menu to close
+      });
+    });
+  });
+</script>
         <script>
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");

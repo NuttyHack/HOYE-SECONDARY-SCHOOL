@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.classList.toggle("hidden");
     });
   }
+  
   document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -51,4 +52,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-</script>

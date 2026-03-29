@@ -69,10 +69,12 @@
   </div>
       </nav>
 
-      <div class="xl:hidden">
-        <button class="hamburger flex flex-col items-center justify-center text-primary p-1.5 hover:bg-slate-100 rounded-xl transition-all" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-[-6px]">Menu</span>
-          <span class="text-3xl leading-none">☰</span>
+     <div class="xl:hidden flex items-center">
+        <button class="hamburger flex flex-col items-center justify-center p-2 hover:bg-slate-100 rounded-lg transition-all" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Menu</span>
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -81,7 +83,15 @@
   <div id="mobileMenu" class="xl:hidden hidden absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg" aria-hidden="true">
     <ul class="flex flex-col py-6">
       <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="home">Home</button></li>
-      </ul>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="event">Events</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="staff">Staff</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="performances">Performances</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="learner-support">Learner Support</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="career-guide">Career guide</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="contact">Contact</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="announcements">Announcements</button></li>
+      <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="apply-online">Apply Online</button></li>
+    </ul>
   </div>
 </header>
 

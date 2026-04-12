@@ -22,27 +22,29 @@
 <body>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- HEADER / NAV -->
+   <!-- HEADER / NAV -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-blue-50/90 backdrop-blur-xl border-b border-blue-100 shadow-sm">
- <div class="w-full px-6 lg:px-10">
+ <div class="max-w-8xl mx-auto px-6">
     <div class="flex items-center justify-between h-24">
       <!-- Brand -->
       <div class="flex items-center gap-4" aria-hidden="false">
         <a href="index.html" class="flex-shrink-0 group">
           <div class="relative">
-            <img src="school.jpg" alt="Hoye Secondary School logo" class="h-14 w-auto transition-transform group-hover:scale-110 duration-300">
+            <img src="images/school.jpg" alt="Hoye Secondary School logo" class="h-14 w-auto transition-transform group-hover:scale-110 duration-300">
             <div class="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
         </a>
         <div class="flex flex-col">
-          <div class="font-bold text-xl text-slate-900 tracking-tight">HOYE SECONDARY SCHOOL</div>
+          <div class="font-bold text-m text-slate-900 tracking-tight">HOYE SECONDARY SCHOOL</div>
           <div class="text-xs text-primary font-medium">SUCCESS THROUGH EDUCATION </div>
         </div>
       </div>
 
       <!-- Desktop Navigation -->
+       <nav class="hidden lg:flex items-center ml-8 flex-shrink-0"></nav>
+       <ul class="flex items-center gap-2 whitespace-nowrap"></ul>
      <nav class="hidden lg:flex items-center">
-  <div class="bg-white/70 backdrop-blur-md rounded-full px-6 py-3 shadow-md border border-blue-100">
+  <div class="bg-white/70 backdrop-blur-md rounded-full px-4 py-2 shadow-md border border-blue-100">
     <ul class="flex items-center gap-2 list-none">
           <li><button class="nav-btn px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-700 transition-all rounded-full hover:bg-blue-100 relative group" data-target="home">
             <span class="relative z-10">Home</span>
@@ -142,7 +144,7 @@
   </p>
 
   <div class="home-layout">
-    <img src="school.jpg" alt="Image of Hoye Secondary School" class="school-image">
+    <img src="images/school.jpg" alt="Image of Hoye Secondary School" class="school-image">
 
      <div class="home-text space-y-6 lg:w-2/3 text-center lg:text-left">
 
@@ -204,10 +206,10 @@
 
 <div class="subjects-grid flex flex-row flex-wrap justify-center gap-8 max-w-6xl mx-auto">
     <!-- Grade 8-9 -->
-    <div class="subject-card w-full sm:w-1/2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
+    <div class="subject-card w-[300px] sm:w-1/1 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
   <input type="checkbox" id="grade8-9" class="peer hidden">
   <label for="grade8-9" class="subject-summary cursor-pointer flex flex-col items-center p-6 focus:outline-none">
-    <img src="gr8-9.png" alt="Grade 8 to 9" class="w-auto h-auto object-contain mb-4 shadow-md rounded-lg">
+    <img src="images/gr8-9.png" alt="Grade 8 to 9" class="w-auto h-auto object-contain mb-4 shadow-md rounded-lg">
     <div class="subject-label text-lg font-semibold text-primary">Grade 8 – 9</div>
   </label>
       <!-- Hidden content -->
@@ -233,7 +235,7 @@
     <div class="subject-card w-full sm:w-1/2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
       <input type="checkbox" id="grade10-12" class="peer hidden">
       <label for="grade10-12" class="subject-summary cursor-pointer flex flex-col items-center p-6 focus:outline-none">
-        <img src="gr10-12.png" alt="Grade 10 to 12" class="w-auto h-auto object-contain mb-3 border-3 border-transparent shadow-md rounded-lg">
+        <img src="images/gr10-12.png" alt="Grade 10 to 12" class="w-auto h-auto object-contain mb-3 border-3 border-transparent shadow-md rounded-lg">
         <div class="subject-label text-lg font-semibold text-primary">Grade 10 – 12</div>
       </label>
 
@@ -292,7 +294,7 @@
       <!-- Entire folder clickable -->
       <label for="event1" class="event-row">
         <div class="event-summary">
-          <img src="20255.png" alt="Event 1">
+          <img src="images/20255.png" alt="Event 1">
         </div>
         <div class="event-info">
           <span class="event-date">📅 Term 2 · 2024</span>
@@ -317,7 +319,7 @@
 
       <label for="event2" class="event-row">
         <div class="event-summary">
-          <img src="20244.png" alt="Event 2">
+          <img src="images/20244.png" alt="Event 2">
         </div>
         <div class="event-info">
           <span class="event-date">📅 Term 1 · 2025</span>
@@ -354,108 +356,230 @@
     </div>
        <!-- System Section -->
 <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-10 rounded-3xl border border-primary/20 shadow-lg">
-  <h3 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-    <span class="text-primary">⚙️</span>
+
+  <h3 class="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+    
+    <!-- clean icon instead of emoji -->
+    <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9.75 3v2.25M14.25 3v2.25M4.5 9h15M6.75 21h10.5A2.25 2.25 0 0019.5 18.75V8.25A2.25 2.25 0 0017.25 6H6.75A2.25 2.25 0 004.5 8.25v10.5A2.25 2.25 0 006.75 21z"/>
+      </svg>
+    </span>
+
     How Our School Operates
   </h3>
 
-  <div class="grid md:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-3 gap-9">
 
     <!-- Qualified Teachers -->
-    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all transform hover:-translate-y-2 shadow-sm">
-      <div class="text-3xl mb-4">👩‍🏫</div>
-      <h4 class="font-bold text-xl text-primary mb-3">Expert Teachers</h4>
-      <p class="text-slate-600 text-sm leading-relaxed">
-        Our highly qualified and passionate teachers guide learners to achieve academic excellence while fostering creativity, critical thinking, and personal growth.
-      </p>
-    </div>
+    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+
+  <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 14l9-5-9-5-9 5 9 5z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.25a11.952 11.952 0 00-6.825-2.193 12.083 12.083 0 01.665-6.479L12 14z" />
+    </svg>
+  </div>
+
+  <h4 class="font-bold text-xl text-slate-900 mb-2">Expert Teachers</h4>
+
+  <p class="text-slate-600 text-sm leading-relaxed">
+    Our highly qualified and passionate teachers guide learners to achieve academic excellence while fostering creativity, critical thinking, and personal growth.
+  </p>
+</div>
 
     <!-- SGB -->
-    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all transform hover:-translate-y-2 shadow-sm">
-      <div class="text-3xl mb-4">🤝</div>
-      <h4 class="font-bold text-xl text-primary mb-3">School Governance</h4>
-      <p class="text-slate-600 text-sm leading-relaxed">
-        Our School Governing Body ensures that school and community goals align, supporting learners and creating a safe, inclusive, and resourceful learning environment.
-      </p>
-    </div>
+    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+
+  <div class="w-11 h-11 rounded-xl bg-indigo-50 flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 11c0-1.657-2.686-3-6-3S0 9.343 0 11s2.686 3 6 3 6-1.343 6-3z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M6 14v7m0 0H3m3 0h3"/>
+    </svg>
+  </div>
+
+  <h4 class="font-bold text-xl text-slate-900 mb-2">School Governance</h4>
+
+  <p class="text-slate-600 text-sm leading-relaxed">
+    Our governing body ensures strong leadership, accountability, and alignment between school operations and community needs.
+  </p>
+</div>
 
     <!-- Non-Teaching Staff -->
-    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all transform hover:-translate-y-2 shadow-sm">
-      <div class="text-3xl mb-4">🛠️</div>
-      <h4 class="font-bold text-xl text-primary mb-3">Support Staff</h4>
-      <p class="text-slate-600 text-sm leading-relaxed">
-        Our dedicated non-teaching staff keep the school running smoothly, maintaining a clean, safe, and organized environment where learners can focus and thrive.
-      </p>
-    </div>
+    <div class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+
+  <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6l-4-4-4 4m8 0H8v5h8V6z"/>
+    </svg>
+  </div>
+
+  <h4 class="font-bold text-xl text-slate-900 mb-2">Support Staff</h4>
+
+  <p class="text-slate-600 text-sm leading-relaxed">
+    Our dedicated staff ensure a safe, clean, and well-organized environment so learners can focus on success.
+  </p>
+</div>
 
   </div>
 </div>
 
  <!-- Badge -->
       <div>
-      <div class="inline-flex items-center gap-4 px-4 py-2.5 bg-primary/10 rounded-full border border-primary/20 animate-slide-up shadow-sm mb-6">
-        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-        <span class="text-xs sm:text-sm font-semibold text-primary tracking-wide">MEET OUR SMT MEMBERS</span>
-      </div>
-      </div>
+      <div class="mb-10">
+  <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-primary/10 rounded-full border border-primary/20 shadow-sm">
+    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+    <span class="text-xs sm:text-sm font-semibold text-primary tracking-wider">
+      MEET OUR SCHOOL LEADERSHIP TEAM
+    </span>
+  </div>
+</div>
       <!-- Teacher 1 -->
-    <div class="teacher-profile">
-        <div class="teacher-description">
-            <h3>Principal </h3>
-            <h3>Mrs. R.Z . Mvelase </h3>
-            <p>Mrs. R.Z . Mvelase is a visionary leader dedicated to academic excellence and discipline at Hoye Secondary School. With decades of teaching and leadership experience, she works tirelessly to ensure that both learners and staff reach their full potential. Her  focus on holistic education prepares learners for life beyond the classroom.</p>
-        </div>
-        <div class="teacher-image">
-            <img src="images/staff/Mvelase.jpeg" alt=" Mrs. R.Z . Mvelase">
-        </div>
+    <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden mb-10 hover:shadow-xl transition-all duration-300">
+
+  <div class="grid md:grid-cols-3 gap-0">
+
+    <!-- Image -->
+    <div class="md:col-span-1 bg-slate-50 flex items-center justify-center p-6">
+      <img src="images/Mvelase.jpeg" 
+           class="w-full h-72 object-cover rounded-2xl shadow-sm"
+           alt="Principal">
     </div>
+
+    <!-- Content -->
+    <div class="md:col-span-2 p-8 flex flex-col justify-center">
+
+      <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+        School Principal
+      </span>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-2">
+        Mrs. R.Z. Mvelase
+      </h3>
+
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        A visionary leader committed to academic excellence and discipline. With extensive experience in education and leadership, she drives a culture of achievement, integrity, and holistic learner development at Hoye Secondary School.
+      </p>
+
+    </div>
+  </div>
+</div>
 
     <!-- Teacher 2 -->
-    <div class="teacher-profile">
-        <div class="teacher-description">
-            <h3>Deputy Principal</h3>
-            <h3>Mr. S.T. Mleshi</h3>
-            <p>Mr. S.T. Mleshi plays a key role in the daily management of the school, supporting the principal in decision-making and ensuring smooth academic operations. He is passionate about learner discipline, teacher development, and creating a safe, productive learning environment.</p>
-        </div>
-        <div class="teacher-image">
-            <img src="images/staff/Mleshi.jpeg" alt="Mr. S.T. Mleshi">
-        </div>
+    <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden mb-10 hover:shadow-xl transition-all duration-300">
+
+  <div class="grid md:grid-cols-3">
+
+    <div class="md:col-span-1 bg-slate-50 flex items-center justify-center p-6">
+      <img src="images/Mleshi.jpeg" class="w-full h-72 object-cover rounded-2xl" alt="Deputy Principal">
     </div>
 
-     <div class="teacher-profile">
-        <div class="teacher-description">
-            <h3>Head of Science Department</h3>
-            <h3>Mr. N. Jule</h3>
-            <p>Mr. N. Jule leads the Science Department with enthusiasm and innovation, ensuring learners develop critical thinking and problem-solving skills. He has introduced modern teaching approaches that connect classroom learning to real-world applications, inspiring future scientists and innovators.</p>
-        </div>
-        <div class="teacher-image">
-            <img src="images/staff/Mshikilane (2).jpeg" alt="Mr. N. Jule">
-        </div>
+    <div class="md:col-span-2 p-8 flex flex-col justify-center">
+
+      <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+        Deputy Principal
+      </span>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-2">
+        Mr. S.T. Mleshi
+      </h3>
+
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        Supports school leadership and academic operations, ensuring discipline, structure, and a positive learning environment for both learners and educators.
+      </p>
+
+    </div>
+  </div>
+</div>
+     <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden mb-10 hover:shadow-xl transition-all duration-300">
+
+  <div class="grid md:grid-cols-3">
+
+    <div class="md:col-span-1 bg-slate-50 p-6 flex items-center justify-center">
+      <img src="images/Mshikilane.jpeg" class="w-full h-72 object-cover rounded-2xl" alt="Science Head">
     </div>
 
-     <div class="teacher-profile">
-        <div class="teacher-description">
-            <h3>Head of Languages Department</h3>
-            <h3> Mr. F.Z. Memela</h3>
-            <p>Mr. F.Z. Memela is passionate about the power of language in shaping identity and communication. As Head of the Languages Department, He ensures high standards in English and IsiZulu learning, promoting literacy, cultural appreciation, and confidence in both written and spoken expression.</p>
-        </div>
-        <div class="teacher-image">
-            <img src="images/staff/ntshebe.jpeg" alt="Mr. F.Z. Memela">
-        </div>
+    <div class="md:col-span-2 p-8 flex flex-col justify-center">
+
+      <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+        Head of Science Department
+      </span>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-2">
+        Mr. N. Jule
+      </h3>
+
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        Leads with innovation and practical learning approaches that connect science education to real-world problem solving and curiosity-driven learning.
+      </p>
+
     </div>
-    <div class="teacher-profile">
-        <div class="teacher-description">
-            <h3>Head of Geography Department</h3>
-            <h3>Mrs I.Z Mazibuko </h3>
-            <p>  Mrs I.Z Mazibuko leads the Geography Department with passion and commitment. 
-      With years of experience in both teaching and field research, he ensures that learners 
-      not only understand maps and physical processes but also develop a real awareness of 
-      their environment and the challenges facing our communities.</p>
-        </div>
-        <div class="teacher-image">
-            <img src="images/staff/Mazibuko.jpg" alt=" Mazibuko  I.Z">
-        </div>
+  </div>
+</div>
+     <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden mb-10 hover:shadow-xl transition-all duration-300">
+
+  <div class="grid md:grid-cols-3">
+
+    <!-- Image -->
+    <div class="md:col-span-1 bg-slate-50 flex items-center justify-center p-6">
+      <img src="images/ntshebe.jpeg" 
+           class="w-full h-72 object-cover rounded-2xl"
+           alt="Head of Languages">
     </div>
+
+    <!-- Content -->
+    <div class="md:col-span-2 p-8 flex flex-col justify-center">
+
+      <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+        Head of Languages Department
+      </span>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-2">
+        Mr. F.Z. Memela
+      </h3>
+
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        A passionate educator dedicated to language mastery and communication skills. He promotes strong literacy, cultural appreciation, and confident expression in both English and IsiZulu, ensuring learners are well-prepared for academic and real-world communication.
+      </p>
+
+    </div>
+  </div>
+</div>
+    <div class="bg-white rounded-3xl shadow-md border border-slate-100 overflow-hidden mb-10 hover:shadow-xl transition-all duration-300">
+
+  <div class="grid md:grid-cols-3">
+
+    <!-- Image -->
+    <div class="md:col-span-1 bg-slate-50 flex items-center justify-center p-6">
+      <img src="images/Mazibuko.jpg" 
+           class="w-full h-72 object-cover rounded-2xl"
+           alt="Head of Geography">
+    </div>
+
+    <!-- Content -->
+    <div class="md:col-span-2 p-8 flex flex-col justify-center">
+
+      <span class="text-xs font-semibold text-primary uppercase tracking-widest">
+        Head of Geography Department
+      </span>
+
+      <h3 class="text-2xl font-bold text-slate-900 mt-2">
+        Mrs. I.Z. Mazibuko
+      </h3>
+
+      <p class="text-slate-600 mt-4 leading-relaxed">
+        Leads the Geography Department with deep passion and academic excellence. She helps learners understand physical and human geography while building environmental awareness and real-world understanding of spatial challenges.
+      </p>
+
+    </div>
+  </div>
+</div>
 </section>
 
   <section id="performances" class="page relative py-24 lg:py-32 overflow-hidden">
@@ -567,7 +691,7 @@
 
  
    <!-- Yearbook Gallery with Blue Glow -->
-<div class="yearbook-container p-6 md:p-10 rounded-3xl bg-white shadow-[0_0_20px_rgba(59,130,246,0.5)] mb-20">
+<div class="yearbook-container p-6 md:p-10 rounded-3xl bg-white shadow-[0_0_20px_rgba(59,130,246,0.5)] mb-20 max-w-6xl mx-auto">
 
   <!-- Yearbook Header -->
   <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">
@@ -578,13 +702,12 @@
   </p>
 
   <!-- Yearbook Grid -->
-  <div class="yearbook-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
-
+  <div class="yearbook-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center place-items-center">
     <!-- Yearbook 2021 -->
     <div class="yearbook-item group relative w-full max-w-xs">
-      <a href="yearbook_2021.pdf" target="_blank">
+      <a href="documents/yearbook_2021.pdf" target="_blank">
         <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
-          <img src="yearbook_2021.jpeg" 
+          <img src="images/yearbook_2021.jpeg" 
                class="w-full h-64 object-cover" 
                alt="2021 Yearbook">
           <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-50 bg-gradient-to-r from-primary to-secondary transition"></div>
@@ -595,9 +718,9 @@
 
     <!-- Yearbook 2022 -->
     <div class="yearbook-item group relative w-full max-w-xs">
-      <a href="yearbook_2022.pdf" target="_blank">
+      <a href="documents/yearbook_2022.pdf" target="_blank">
         <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
-          <img src="yearbook_2022.jpeg" 
+          <img src="images/yearbook_2022.jpeg" 
                class="w-full h-64 object-cover" 
                alt="2022 Yearbook">
           <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-50 bg-gradient-to-r from-primary to-secondary transition"></div>
@@ -642,163 +765,177 @@
 
 
    <section id="learner-support" class="relative page bg-slate-50 py-24">
-  <!-- Background Pattern -->
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23000000\" fill-opacity=\"0.02\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="text-center mb-20">
+  <!-- Header -->
+ <div class="text-center mb-20">
       <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
         <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
           Learner Support
         </span>
       </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
-        Download past papers, revision notes, and study guides to support your learning journey.
-      </p>
-      <div class="h-1 w-28 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-    </div>
-<!-- Support Resources Container -->
-<div class="bg-white/70 backdrop-blur-sm border border-primary/20 rounded-3xl p-10 shadow-xl mb-20">
-
-  <!-- Section Title -->
-  <div class="text-center mb-12">
-    <h3 class="text-3xl font-bold text-slate-900 mb-4">
-      📚 Academic Support Resources
-    </h3>
-    <p class="text-slate-600 max-w-2xl mx-auto">
-      Access trusted study material and video lessons to strengthen your understanding and prepare confidently for exams.
+    <p class="mt-4 text-lg text-slate-600">
+      Academic resources, mentorship, and digital learning tools to support student success.
     </p>
-    <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
+    <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
   </div>
 
-  <!-- DOWNLOAD SECTION -->
-  <div class="mb-14">
-    <h4 class="text-xl font-semibold text-primary text-center mb-6">
-      📄 Click to Download Past Question Papers & Study Guides
-    </h4>
+  <!-- Main Container -->
+  <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-md border border-slate-100 p-10">
 
+    <!-- Section Title -->
+    <div class="text-center mb-10">
+      <h3 class="text-2xl font-semibold text-slate-900">
+        Academic Learning Resources
+      </h3>
+      <p class="text-slate-500 mt-2">
+        Trusted platforms for revision, exam preparation, and self-study.
+      </p>
+    </div>
+
+    <!-- Resource Grid -->
     <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
       <a href="https://www.stanmorephysics.com" target="_blank"
-         class="group flex flex-col items-center bg-white rounded-2xl shadow-md p-8 text-center border border-slate-200 hover:border-primary hover:shadow-xl transition transform hover:-translate-y-2">
-        <span class="text-5xl mb-4">📘</span>
-        <h4 class="text-lg font-bold text-slate-800 mb-2 group-hover:text-primary transition">
+         class="group bg-slate-50 hover:bg-white border border-slate-200 rounded-2xl p-8 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col items-center text-center">
+
+        <!-- Icon -->
+        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6l8 4-8 4-8-4 8-4z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 14l6.16-3.422A12.083 12.083 0 0121 16.5V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-2.5a12.083 12.083 0 012.84-5.922L12 14z"/>
+          </svg>
+        </div>
+
+        <h4 class="text-lg font-semibold text-slate-900 group-hover:text-blue-600">
           Stanmore Physics
         </h4>
-        <p class="text-slate-600 text-sm">
-          Free study guides, exam papers & memorandums
+
+        <p class="text-sm text-slate-600 mt-2">
+          Free study guides, revision notes, and past exam papers.
         </p>
       </a>
 
+      <!-- Card 2 -->
       <a href="https://www.saexampapers.co.za/" target="_blank"
-         class="group flex flex-col items-center bg-white rounded-2xl shadow-md p-8 text-center border border-slate-200 hover:border-primary hover:shadow-xl transition transform hover:-translate-y-2">
-        <span class="text-5xl mb-4">📝</span>
-        <h4 class="text-lg font-bold text-slate-800 mb-2 group-hover:text-primary transition">
+         class="group bg-slate-50 hover:bg-white border border-slate-200 rounded-2xl p-8 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col items-center text-center">
+
+        <!-- Icon -->
+        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-100 text-indigo-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6M9 8h6M7 4h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+          </svg>
+        </div>
+
+        <h4 class="text-lg font-semibold text-slate-900 group-hover:text-indigo-600">
           SA Exam Papers
         </h4>
-        <p class="text-slate-600 text-sm">
-          Grade 12 question papers & revision material
+
+        <p class="text-sm text-slate-600 mt-2">
+          Grade 12 question papers and official revision materials.
         </p>
       </a>
     </div>
-  </div>
 
-  <!-- YOUTUBE SECTION -->
-  <div>
-    <h4 class="text-xl font-semibold text-secondary text-center mb-6">
-      🎥 Watch Content from Trusted Free Online Tutors
-    </h4>
+    <!-- Video Section -->
+    <div class="mt-14 text-center">
+      <h3 class="text-xl font-semibold text-slate-900 mb-8">
+        Recommended Educational Channels
+      </h3>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <a href="http://www.youtube.com/@kevinmathscience" target="_blank"
-         class="group flex flex-col items-center bg-white rounded-2xl shadow-md p-8 text-center border border-slate-200 hover:border-secondary hover:shadow-xl transition transform hover:-translate-y-2">
-        <span class="text-5xl mb-4">▶️</span>
-        <h4 class="text-lg font-bold text-slate-800 mb-2 group-hover:text-secondary transition">
-          Kevinmathscience
-        </h4>
-        <p class="text-slate-600 text-sm">
-         Master the content and practise past exam questions.
-        </p>
-      </a>
+      <div class="grid md:grid-cols-2 gap-8">
 
-      <a href="http://www.youtube.com/@MlungisiNkosi" target="_blank"
-         class="group flex flex-col items-center bg-white rounded-2xl shadow-md p-8 text-center border border-slate-200 hover:border-secondary hover:shadow-xl transition transform hover:-translate-y-2">
-        <span class="text-5xl mb-4">📺</span>
-        <h4 class="text-lg font-bold text-slate-800 mb-2 group-hover:text-secondary transition">
-          Mlungisi Nkosi
-        </h4>
-        <p class="text-slate-600 text-sm">
-          Step-by-step lessons and exam-focused revision
-        </p>
-      </a>
-    </div>
-  </div>
+        <!-- Video 1 -->
+        <a href="http://www.youtube.com/@kevinmathscience" target="_blank"
+           class="group bg-slate-50 hover:bg-white border border-slate-200 rounded-2xl p-8 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col items-center text-center">
 
-</div>
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-red-100 text-red-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M14.752 11.168l-6.518-3.76A1 1 0 007 8.288v7.424a1 1 0 001.234.97l6.518-3.76a1 1 0 000-1.744z"/>
+            </svg>
+          </div>
 
+          <h4 class="text-lg font-semibold text-slate-900 group-hover:text-red-600">
+            Kevinmathscience
+          </h4>
 
-    <!-- RCL Gallery -->
-    <h3 class="text-3xl font-bold text-slate-900 mb-8 text-center">Meet Our 2025 Student Leaders</h3>
-    <div class="grid md:grid-cols-3 gap-8 mb-16 justify-items-center">
-      <div class="group text-center">
-        <a href="RCL H.jpg" target="_blank">
-          <img src="RCL H.jpg" alt="Head Boy & Girl"
-               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
+          <p class="text-sm text-slate-600 mt-2">
+            Step-by-step math and science tutorials.
+          </p>
         </a>
-        <p class="mt-4 font-semibold text-slate-700">Head Boy & Girl</p>
-      </div>
 
-      <div class="group text-center">
-        <a href="RCL Executive council.jpg" target="_blank">
-          <img src="RCL Executive council.jpg" alt="RCL Executive Council"
-               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
-        </a>
-        <p class="mt-4 font-semibold text-slate-700">Executive Council</p>
-      </div>
+        <!-- Video 2 -->
+        <a href="http://www.youtube.com/@MlungisiNkosi" target="_blank"
+           class="group bg-slate-50 hover:bg-white border border-slate-200 rounded-2xl p-8 transition-all hover:shadow-lg hover:-translate-y-1 flex flex-col items-center text-center">
 
-      <div class="group text-center">
-        <a href="commi.jpg" target="_blank">
-          <img src="commi.jpg" alt="Committee"
-               class="rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-2 w-full max-w-[250px]">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-green-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m0-4l-6-3m6 4v4m0-4L9 7"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-semibold text-slate-900 group-hover:text-green-600">
+            Mlungisi Nkosi
+          </h4>
+
+          <p class="text-sm text-slate-600 mt-2">
+            Exam-focused revision and guided lessons.
+          </p>
         </a>
-        <p class="mt-4 font-semibold text-slate-700">Committee</p>
+
       </div>
     </div>
 
-      <!-- Learner Support Values -->
-<div class="learner-values">
-  <div class="value-card">
-    <span class="value-icon">🎓</span>
-    <p>Guidance & Support</p>
   </div>
-  <div class="value-card">
-    <span class="value-icon">💡</span>
-    <p>Innovative Teaching</p>
-  </div>
-  <div class="value-card">
-    <span class="value-icon">🤝</span>
-    <p>Mentorship & Care</p>
-  </div>
-</div>
-  </div>
-       <!-- Intro Card -->
-<div class="group relative bg-white p-10 rounded-3xl border border-gray-200 hover:border-primary-blue/50 transition-all shadow-lg">
-  <div class="relative space-y-6">
 
-    <p class="text-xl text-slate-700 leading-relaxed">
-      Our greatest strength lies in our <span class="text-primary font-semibold">community of achievers</span>. Many of our former learners are now university students at some of the country’s leading institutions. Whenever they have the opportunity, they return to our school to inspire, mentor, and encourage the next generation.
+  <!-- RCL Section -->
+  <div class="max-w-6xl mx-auto mt-20">
+
+    <h3 class="text-3xl font-bold text-slate-900 mb-10 text-center">
+      Student Leadership Council 2025
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="text-center bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition">
+        <img src="images/RCL H.jpg" class="w-64 h-64 object-cover rounded-xl mx-auto" />
+        <p class="mt-4 font-semibold text-slate-800">Head Boy & Girl</p>
+      </div>
+
+      <div class="text-center bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition">
+        <img src="images/RCL Executive council.jpg" class="w-64 h-64 object-cover rounded-xl mx-auto" />
+        <p class="mt-4 font-semibold text-slate-800">Executive Council</p>
+      </div>
+
+      <div class="text-center bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition">
+        <img src="images/commi.jpg" class="w-64 h-64 object-cover rounded-xl mx-auto" />
+        <p class="mt-4 font-semibold text-slate-800">Committee</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Intro Card -->
+  <div class="max-w-5xl mx-auto mt-20 bg-white rounded-3xl border border-slate-100 p-10 shadow-sm space-y-6">
+
+    <p class="text-slate-700 leading-relaxed text-lg">
+      Our greatest strength lies in our community of achievers. Many of our former learners are now university students across leading institutions and return to inspire current learners.
     </p>
 
-    <p class="text-lg text-slate-600 leading-relaxed">
-      Seeing someone who once walked the same corridors — often from the same background and economic circumstances — succeed at a top university sends a powerful message to our learners: <span class="text-primary font-semibold">your dreams are valid and achievable</span>. These visits create real, relatable motivation that textbooks alone cannot provide.
+    <p class="text-slate-600 leading-relaxed">
+      Their success stories remind learners that their dreams are achievable. We also collaborate with universities and professionals to guide career pathways and future planning.
     </p>
 
-    <p class="text-lg text-slate-600 leading-relaxed">
-      In addition, our graduates frequently come back to share their journeys, lessons, and career experiences. We also invite universities, colleges, and professional institutions to guide our learners with career information, application support, and future planning. Through these engagements, we ensure that every learner is equipped with the <span class="text-primary font-semibold">knowledge, confidence, and direction</span> needed to succeed beyond school.
+    <p class="text-slate-600 leading-relaxed">
+      Through mentorship and exposure, we ensure learners are equipped with confidence, knowledge, and direction for life beyond school.
     </p>
 
   </div>
-</div>
 
 </section>
 
@@ -836,7 +973,7 @@
         <div class="relative w-full aspect-square bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center overflow-hidden rounded-t-3xl">
   <img 
     class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
-    src="NSFAS-0.jpg" 
+    src="images/NSFAS-0.jpg" 
     alt="NSFAS">
 </div>
 
@@ -887,7 +1024,7 @@
         <div class="relative w-full aspect-square bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center overflow-hidden rounded-t-3xl">
   <img 
     class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
-    src="UNI.jpg" 
+    src="images/UNI.jpg" 
     alt="ZABURSARIES">
 </div>
 
@@ -932,7 +1069,7 @@
         <div class="relative w-full aspect-square bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center overflow-hidden rounded-t-3xl">
   <img 
     class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
-    src="OIP.webp" 
+    src="images/OIP.webp" 
     alt="CAO">
 </div>
 
@@ -976,7 +1113,7 @@
         <div class="relative w-full aspect-square bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center overflow-hidden rounded-t-3xl">
   <img 
     class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
-    src="ZABURSARIES.jpg" 
+    src="images/ZABURSARIES.jpg" 
     alt="Universities-Overview">
 </div>
 
@@ -1086,138 +1223,125 @@
 </div>
 
 </section>
+<section id="contact" class="page py-24 bg-slate-50 relative overflow-hidden">
 
-<section id="contact" class="page py-24 bg-white relative">
+  <!-- subtle background -->
+  <div class="absolute inset-0 opacity-20"
+       style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.06) 1px, transparent 0); background-size: 22px 22px;"></div>
 
-  <!-- Header -->
-  <div class="text-center mb-20">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight">
-      <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-        Contact
-      </span>
-    </h2>
+  <div class="relative max-w-7xl mx-auto px-6">
 
-    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-      Connect with us easily — whether by phone, email, or visiting our school.
-    </p>
+    <!-- HEADER -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-black text-slate-900 mb-4">Contact</h2>
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+        Reach the school through official communication channels below.
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mt-6 rounded-full"></div>
+    </div>
 
-    <div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-  </div>
+    <!-- GRID -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-  <!-- GRID LAYOUT -->
-  <div class="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition">
 
-    <!-- LEFT SIDE (Contact Cards) -->
-    <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+        <img src="images/phone.png" alt="Phone"
+             class="w-full h-40 object-contain bg-slate-100 p-6">
 
-      <!-- Call -->
-      <div class="relative group bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2">
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition duration-300"></div>
-        <div class="relative bg-white rounded-2xl p-6 border border-slate-200">
-          <img src="call.avif" alt="Phone" class="contact-img">
-          <div class="contact-info">
-            <h4>Call Us</h4>
-            <p><a href="tel:0723071712">072 307 1712</a></p>
-          </div>
+        <div class="p-6 text-center">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Call Us</h3>
+          <a href="tel:0723071712"
+             class="text-blue-600 font-semibold hover:underline">
+            072 307 1712
+          </a>
         </div>
+
       </div>
 
-      <!-- Email -->
-      <div class="relative group bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2">
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition duration-300"></div>
-        <div class="relative bg-white rounded-2xl p-6 border border-slate-200">
-          <img src="email.webp" alt="Email" class="contact-img">
-          <div class="contact-info">
-            <h4>Email</h4>
-            <p><a href="mailto:Hoye.sec@gmail.com">Hoye.sec@gmail.com</a></p>
-          </div>
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition">
+
+        <img src="images/email.png" alt="Email"
+             class="w-full h-40 object-contain bg-slate-100 p-6">
+
+        <div class="p-6 text-center">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Email Us</h3>
+          <a href="mailto:hoye.sec@gmail.com"
+             class="text-indigo-600 font-semibold hover:underline">
+            hoye.sec@gmail.com
+          </a>
         </div>
+
       </div>
 
-      <!-- Visit -->
-      <div class="relative group bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2">
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition duration-300"></div>
-        <div class="relative bg-white rounded-2xl p-6 border border-slate-200">
-          <img src="maps.avif" alt="Location" class="contact-img">
-          <div class="contact-info">
-            <h4>Visit Us</h4>
-            <p><a href="https://maps.app.goo.gl/3S6zuUyJwJraP1tv6" target="_blank">Navigate To Our School</a></p>
-          </div>
+      <!-- CARD 3 -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition">
+
+        <img src="images/visit.png" alt="Location"
+             class="w-full h-40 object-contain bg-slate-100 p-6">
+
+        <div class="p-6 text-center">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Visit Us</h3>
+          <a href="https://maps.app.goo.gl/3S6zuUyJwJraP1tv6"
+             target="_blank"
+             class="text-blue-600 font-semibold hover:underline">
+            Open Location
+          </a>
         </div>
+
       </div>
 
-      <!-- Address -->
-      <div class="relative group bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2">
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition duration-300"></div>
-        <div class="relative bg-white rounded-2xl p-6 border border-slate-200">
-          <img src="address.jpg" alt="Address" class="contact-img">
-          <div class="contact-info">
-            <h4>Postal Address</h4>
-            <p>Private Bag X1646</p>
-            <p>Bergville</p>
-            <p>3350</p>
-          </div>
+      <!-- CARD 4 -->
+      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition">
+
+        <img src="images/phone.png" alt="Address"
+             class="w-full h-40 object-contain bg-slate-100 p-6">
+
+        <div class="p-6 text-center">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Postal Address</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Private Bag X1646<br>
+            Bergville<br>
+            3350
+          </p>
         </div>
+
       </div>
 
     </div>
 
-    <!-- RIGHT SIDE (Sidebar Notice) -->
-    <aside class="lg:col-span-1">
-      <div class="relative group bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2">
+    <!-- NOTICE -->
+    <div class="mt-16 bg-white rounded-3xl border border-slate-200 p-10 shadow-sm">
 
-        <!-- Blue Glow -->
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-0 group-hover:opacity-60 transition duration-300"></div>
+      <h3 class="text-2xl font-bold text-slate-900 mb-6">
+        Official Communication Notice
+      </h3>
 
-        <div class="relative bg-white rounded-2xl p-6 border border-slate-200">
+      <div class="space-y-4 text-slate-600 leading-relaxed">
 
-          <h4 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-            ⚠️ Official Communication Notice
-          </h4>
+        <p>
+          The school does not operate official social media accounts.
+        </p>
 
-          <div class="space-y-5 text-slate-700 leading-relaxed text-sm">
+        <p>
+          Any pages using the school name are not verified.
+        </p>
 
-            <p>
-              The school is aware of social media accounts using our name on platforms such as Facebook and others.
-            </p>
+        <p>
+          Only announcements on this website are official.
+        </p>
 
-            <p>
-              Please note that we currently do <strong>NOT</strong> operate or manage any official social media accounts.
-            </p>
-
-            <p>
-              Any information shared on those pages is not verified and does not represent the school.
-            </p>
-
-            <div class="pt-4 border-t border-primary/20">
-              <p class="font-semibold text-slate-900">📢 Official Updates</p>
-              <p>
-                All official announcements will only be published on this website under the Announcements section.
-              </p>
-            </div>
-
-            <div class="pt-4 border-t border-primary/20">
-              <p>
-                We encourage parents and learners to report misleading information, as false posts can harm both learners and the school’s reputation.
-              </p>
-            </div>
-
-            <div class="pt-4 border-t border-primary/20">
-              <p>
-                When official social media pages are launched, verified links will be published here.
-              </p>
-            </div>
-
-          </div>
-        </div>
+        <p class="font-semibold text-slate-900 pt-4 border-t">
+          Always rely on official school communication channels.
+        </p>
 
       </div>
-    </aside>
 
-  </div> <!-- END GRID -->
+    </div>
 
+  </div>
 </section>
-
 <section id="announcements" class="page py-24 bg-white relative overflow-hidden">
 
   <!-- Background Pattern -->
@@ -1239,10 +1363,10 @@
 
     <!-- Announcement Cards Grid -->
     <div class="grid gap-8 justify-center">
-      <!-- Each card will max out at 600px wide on desktop -->
-      <!-- Announcement 2 -->
+   
+  
       <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
-        <img src="closed.png" alt="Farewell Teacher 1" class="w-full h-85 md:h-88 lg:h-76 object-cover">
+        <img src="images/closed.png" alt="Application closed" class="w-full h-85 md:h-88 lg:h-76 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Application For 2026 Are Closed</h3>
           <p class="text-slate-600 line-clamp-3">
@@ -1281,7 +1405,7 @@
 
       <!-- Announcement 3 -->
       <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
-        <img src="SKAVS.png" alt="Farewell Teacher 2" class="w-full h-85 md:h-100 lg:h-100 object-cover">
+        <img src="images/SKAVS.png" alt="SKAVS AI" class="w-full h-85 md:h-100 lg:h-100 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Introducing SKAVS - Your Smart AI Assistant </h3>
           <p class="text-slate-600 line-clamp-3">
@@ -1321,7 +1445,7 @@
       </div>
       <!-- Announcement 1 -->
       <div class="group relative bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 max-w-[600px] mx-auto w-full">
-        <img src="image3.jpg" alt="Teacher Donation" class="w-full h-85 md:h-88 lg:h-76 object-cover">
+        <img src="images/image3.jpg" alt="Teacher Donation" class="w-full h-85 md:h-88 lg:h-76 object-cover">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-slate-900 mb-4">Mrs. L.S. Khumalo Donates Banner in Honour of Hoye Secondary</h3>
           <p class="text-slate-600 line-clamp-3">
@@ -1357,9 +1481,9 @@
 </div>
 
             <div class="grid grid-cols-3 gap-2">
-              <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="School Ceremony" class="w-full h-24 object-cover rounded-lg"></a>
-              <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Banner Reveal" class="w-full h-24 object-cover rounded-lg"></a>
-              <a href="image4.jpg" target="_blank"><img src="image4.jpg" alt="Staff and Donor" class="w-full h-24 object-cover rounded-lg"></a>
+              <a href="images/image2.jpg" target="_blank"><img src="images/image2.jpg" alt="School Ceremony" class="w-full h-24 object-cover rounded-lg"></a>
+              <a href="images/image3.jpg" target="_blank"><img src="images/image3.jpg" alt="Banner Reveal" class="w-full h-24 object-cover rounded-lg"></a>
+              <a href="images/image4.jpg" target="_blank"><img src="images/image4.jpg" alt="Staff and Donor" class="w-full h-24 object-cover rounded-lg"></a>
             </div>
           </div>
         </div>
@@ -1377,7 +1501,7 @@
 <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: linear-gradient(to right, #e6f0ff, #ffffff); border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   
   <!-- Logo - Centered -->
-  <img src="school.jpg" alt="School Logo"
+  <img src="images/school.jpg" alt="School Logo"
        style="display: block; margin: 0 auto 15px auto; width: 100px; height: auto; border-radius: 50%; border: 2px solid #004080; padding: 5px; background: #fff;">
   <!-- School Name -->
   <h2 style="margin: 0; color: #004080; font-size: 28px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;">
@@ -1960,7 +2084,7 @@ document.querySelectorAll('input[name="subject_1011"], input[name="subject_12"]'
       <div class="flex items-center gap-6">
         <a href="#" class="flex-shrink-0 group">
           <div class="relative">
-            <img src="school.jpg" alt="Hoye secondary school Logo" class="h-16 w-auto rounded-xl transition-transform group-hover:scale-110 duration-300">
+            <img src="images/school.jpg" alt="Hoye secondary school Logo" class="h-16 w-auto rounded-xl transition-transform group-hover:scale-110 duration-300">
             <div class="absolute inset-0 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
         </a>

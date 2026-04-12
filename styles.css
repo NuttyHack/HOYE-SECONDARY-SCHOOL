@@ -812,12 +812,7 @@ nav a.active {
     display: none !important;
   }
 }
-.yearbook-item p {
-  color: #0047ab; /* dark blue */
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-}
+
 .collapsible {
     margin-bottom: 15px;
     border: 2px solid #004080;
@@ -2377,13 +2372,6 @@ html, body {
   transform: translateY(-6px);
   box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
-.event-row {
-  display: flex;
-  gap: 40px;
-  padding: 35px;
-  cursor: pointer;
-  align-items: center;
-}
 
 .event-summary img {
   width: 280px;
@@ -2503,4 +2491,17 @@ input:checked ~ .event-gallery {
 }
 #learner-support {
   padding-top: 100px; /* space for fixed navbar */
+}
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 35px;
+  cursor: pointer;
+}
+.event-summary img {
+  width: 210px;   
+  height: 210px;
+  object-fit: contain; 
+  border-radius: 12px;
 }

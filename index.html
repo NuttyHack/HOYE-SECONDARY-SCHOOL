@@ -88,14 +88,25 @@
 
       <!-- Mobile Menu Button -->
       <div class="lg:hidden">
-        <button class="hamburger text-3xl text-primary p-2 hover:bg-slate-100 rounded-xl transition-all" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">☰</button>
+        <button id="hamburger"
+  class="relative w-10 h-10 flex flex-col justify-center items-center group"
+  aria-expanded="false"
+  aria-controls="mobileMenu"
+  aria-label="Toggle menu">
+
+  <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+  <span class="block w-6 h-0.5 bg-primary my-1 transition-all duration-300"></span>
+  <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+
+</button>
       </div>
     </div>
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobileMenu" class="lg:hidden hidden absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg" aria-hidden="true">
-    <ul class="flex flex-col py-6">
+  <div id="mobileMenu"
+  class="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg transform -translate-y-5 opacity-0 pointer-events-none transition-all duration-300"
+  aria-hidden="true">
       <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="home">Home</button></li>
       <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="event">Events</button></li>
       <li><button class="mobile-link w-full text-left px-8 py-4 text-slate-700 hover:bg-slate-50 hover:text-primary font-semibold transition-all border-l-4 border-transparent hover:border-primary" data-target="staff">Staff</button></li>
@@ -590,14 +601,17 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
     <!-- Header -->
-<div class="text-center mb-20 px-4 sm:px-6">
-  <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-snug sm:leading-tight">
-    <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-      Academic Performance Overview
-    </span>
-  </h2>
+<div class="text-center mb-16 px-6 sm:px-6">
+  <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+  <span class="block text-primary tracking-tight">
+    Academic Performance
+  </span>
+  <span class="block text-secondary font-extrabold">
+    Overview
+  </span>
+</h2>
 
-  <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+  <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed">
     A record of academic excellence showcasing our matric results, learner achievement, and steady progress over the years.
   </p>
 
@@ -951,11 +965,11 @@
 
     <!-- Header -->
     <div class="text-center mb-16">
-      <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
-        <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent">
-          Career Guide
-        </span>
-      </h2>
+       <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+  <span class="block text-primary tracking-tight">
+    Career Guide
+  </span>
+</h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto">
         Explore bursaries, university applications, and financial aid opportunities to help you plan your future.
       </p>
@@ -1350,11 +1364,12 @@
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 class="text-5xl lg:text-6xl font-black text-slate-900 mb-6">
-        <span class="bg-gradient-to-r from-primary via-primary-light to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-          Announcements
-        </span>
-      </h2>
+      <div class="text-center mb-16 px-6 sm:px-6">
+  <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+  <span class="block text-primary tracking-tight">
+    Announcements
+  </span>
+</h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
         Stay updated with our latest school news.
       </p>
@@ -2177,12 +2192,7 @@ document.querySelectorAll('input[name="subject_1011"], input[name="subject_12"]'
         const target = btn.dataset.target;
         if (target) showPage(target);
 
-        // For mobile: close menu after click
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileMenu && mobileMenu.classList.contains('block')) {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('block');
-        }
+
       });
     });
 
@@ -2190,66 +2200,69 @@ document.querySelectorAll('input[name="subject_1011"], input[name="subject_12"]'
     showPage('home');
   });
 </script>
-  <script>
-function initSignaturePad(canvasId) {
-  const canvas = document.getElementById(canvasId);
-  const ctx = canvas.getContext("2d");
-  let drawing = false;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-  canvas.addEventListener("mousedown", e => { drawing = true; ctx.beginPath(); ctx.moveTo(e.offsetX, e.offsetY); });
-  canvas.addEventListener("mousemove", e => { if (drawing) { ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke(); } });
-  canvas.addEventListener("mouseup", () => drawing = false);
-  canvas.addEventListener("mouseout", () => drawing = false);
+  const navButtons = document.querySelectorAll(".nav-btn, .mobile-link");
+  const pages = document.querySelectorAll(".page");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburger = document.getElementById("hamburger");
 
-  // Touch events
-  canvas.addEventListener("touchstart", e => {
-    e.preventDefault();
-    const rect = canvas.getBoundingClientRect();
-    ctx.beginPath();
-    ctx.moveTo(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
-    drawing = true;
-  });
-  canvas.addEventListener("touchmove", e => {
-    e.preventDefault();
-    if (!drawing) return;
-    const rect = canvas.getBoundingClientRect();
-    ctx.lineTo(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
-    ctx.stroke();
-  });
-  canvas.addEventListener("touchend", () => drawing = false);
-}
+  function showPage(targetId) {
+    pages.forEach(page => page.classList.remove("active"));
 
-["parent-signature","learner-signature"].forEach(initSignaturePad);
-
-document.querySelectorAll(".sig-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const canvas = document.getElementById(btn.dataset.target);
-    const ctx = canvas.getContext("2d");
-    if (btn.dataset.action === "clear") {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
+    const targetPage = document.getElementById(targetId);
+    if (targetPage) {
+      targetPage.classList.add("active");
     }
-    if (btn.dataset.action === "done") {
-      // For now, just a small alert (later we’ll integrate into PDF export)
-      alert(btn.dataset.target + " signature saved!");
+  }
+
+  function closeMenu() {
+    if (mobileMenu && hamburger) {
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
     }
+  }
+
+  function openMenu() {
+    if (mobileMenu && hamburger) {
+      mobileMenu.classList.add("open");
+      hamburger.classList.add("open");
+      hamburger.setAttribute("aria-expanded", "true");
+      mobileMenu.setAttribute("aria-hidden", "false");
+    }
+  }
+
+  // Toggle menu
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      if (mobileMenu.classList.contains("open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  // Nav clicks
+  navButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-target");
+      if (target) showPage(target);
+
+    
+      closeMenu();
+    });
   });
+
 });
 </script>
-        <script>
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-
-    const isOpen = !mobileMenu.classList.contains("hidden");
-    hamburger.setAttribute("aria-expanded", isOpen);
-    mobileMenu.setAttribute("aria-hidden", !isOpen);
-  });
-</script>
+        
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const ctx = document.getElementById('passRateChart').getContext('2d');
+const ctx1 = document.getElementById('passRateChart').getContext('2d');
 
 new Chart(ctx, {
   type: 'line',
@@ -2329,10 +2342,10 @@ new Chart(ctx, {
       }
     }]
   },
-  options: {
+
   options: {
   responsive: true,
-  maintainAspectRatio: false, // 🔥 THIS FIXES SQUEEZING
+  maintainAspectRatio: false, 
   animation: {
     duration: 2000,
     easing: 'easeOutQuart'
@@ -2368,7 +2381,9 @@ new Chart(ctx, {
 }
 
 });
+
 </script>
+
 <script>
 const buttons = document.querySelectorAll(".toggle-btn");
 
@@ -2448,11 +2463,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
  <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Rfstd3-hz7B7XfCU992Jw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Rfstd3-hz7B7XfCU992Jw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 
 <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Rfstd3-hz7B7XfCU992Jw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Rfstd3-hz7B7XfCU992Jw";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 </body>
 </html>

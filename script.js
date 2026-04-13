@@ -1,5 +1,4 @@
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
   const navButtons = document.querySelectorAll(".nav-btn, .mobile-link");
   const pages = document.querySelectorAll(".page");
@@ -15,22 +14,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  navButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      const target = this.getAttribute("data-target");
-      showPage(target);
+  function closeMenu() {
+    if (mobileMenu && hamburger) {
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    }
+  }
 
-      // close mobile menu after click
-      if (mobileMenu) {
-        mobileMenu.classList.add("hidden");
+  function openMenu() {
+    if (mobileMenu && hamburger) {
+      mobileMenu.classList.add("open");
+      hamburger.classList.add("open");
+      hamburger.setAttribute("aria-expanded", "true");
+      mobileMenu.setAttribute("aria-hidden", "false");
+    }
+  }
+
+  // Toggle menu
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      if (mobileMenu.classList.contains("open")) {
+        closeMenu();
+      } else {
+        openMenu();
       }
+    });
+  }
+
+  // Nav clicks
+  navButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-target");
+      if (target) showPage(target);
+
+    
+      closeMenu();
     });
   });
 
-  // Hamburger toggle
-  if (hamburger) {
-    hamburger.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-  
+});

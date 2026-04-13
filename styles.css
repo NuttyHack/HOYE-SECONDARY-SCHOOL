@@ -2123,10 +2123,7 @@ nav a.active {
     align-items: center;
   }
 }
-/* =====================================
-   🔥 GLOBAL MOBILE FIX PACK
-   Add this at VERY END of CSS
-===================================== */
+
 
 @media (max-width: 768px) {
 
@@ -2165,12 +2162,26 @@ nav a.active {
     max-width: 100% !important;
   }
 
-  /* 5️⃣ FIX TEXT SIZES FOR MOBILE */
-  h1 { font-size: 26px !important; }
-  h2 { font-size: 22px !important; }
-  h3 { font-size: 18px !important; }
-  p  { font-size: 15px !important; }
-
+@media (max-width: 768px) {
+  
+  h1 { font-size: 36px; }
+  h2 { font-size: 200px; }
+  h3 { font-size: 24px; }
+  p  { font-size: 15px; }
+}
+@media (max-width: 768px) {
+  #performances {
+    padding-top: 120px; /* pushes section below header */
+  }
+}
+@media (max-width: 768px) {
+  #announcements {
+    padding-top: 120px; /* pushes section below header */
+  }
+}
+#career-guide {
+  scroll-margin-top: 150px; /* adjusts for sticky header */
+}
   /* 6️⃣ IMAGES NEVER OVERFLOW */
   img {
     max-width: 100%;
@@ -2504,4 +2515,60 @@ input:checked ~ .event-gallery {
   height: 210px;
   object-fit: contain; 
   border-radius: 12px;
+}
+/* Hamburger base */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: 0.35s ease;
+}
+
+/* lines */
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { top: 18px; }
+
+/* ANIMATION → turns into X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+/* Show menu */
+#mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hamburger animation */
+#hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }

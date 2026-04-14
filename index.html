@@ -709,7 +709,12 @@
 
   <!-- Yearbook Header -->
   <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">
-    📚 School Yearbooks & Reports
+    <div class="flex items-center justify-center gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0C10.832 16.94 9.246 16.5 7.5 16.5S4.168 16.94 3 17.747V6.253C4.168 5.44 5.754 5 7.5 5s3.332.44 4.5 1.253zM12 17.747C13.168 16.94 14.754 16.5 16.5 16.5s3.332.44 4.5 1.247V6.253C19.832 5.44 18.246 5 16.5 5s-3.332.44-4.5 1.253"/>
+  </svg>
+  <span>School Yearbooks & Reports</span>
+</div>
   </h3>
   <p class="text-center text-slate-500 mb-12">
     Click on the image to view the full gradebook PDF
@@ -747,24 +752,112 @@
 
   </div>
 </div>
-    <!-- Academic Badge -->
-    <div class="flex justify-center mb-12">
-      <div class="relative inline-flex items-center justify-center px-10 py-5 text-white font-bold text-sm md:text-base tracking-wide uppercase">
-        <!-- Glow -->
-        <div class="absolute inset-0 bg-amber-400 opacity-30 blur-2xl rounded-xl"></div>
-        <!-- Shield Shape -->
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 clip-academic shadow-2xl"></div>
-        <!-- Content -->
-        <div class="relative flex items-center gap-3 text-center">
-          <span class="text-2xl">🏆</span>
-          <span>National Senior Certificate – Highest Pass Rate Achieved: 92.6% (2024)</span>
-        </div>
+<!-- Achievements Section -->
+<div class="mt-16">
+  <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">
+  <div class="flex items-center justify-center gap-2">
+    
+    <!-- Trophy / Achievement Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         class="w-7 h-7 text-primary" 
+         fill="currentColor" 
+         viewBox="0 0 24 24">
+      <path d="M17 3H7v2H3v3c0 2.21 1.79 4 4 4h.09A5.002 5.002 0 0011 16.9V19H8v2h8v-2h-3v-2.1A5.002 5.002 0 0016.91 12H17c2.21 0 4-1.79 4-4V5h-4V3z"/>
+    </svg>
+
+    <span>School Achievements</span>
+
+  </div>
+</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center place-items-center">
+
+    <!-- Achievement 1 -->
+    <div class="group relative w-full max-w-xs">
+      <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
+        <img src="images/achievement_2023.jpg" 
+             class="w-full h-64 object-cover" 
+             alt="Best School 2023">
+        <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-40 bg-gradient-to-r from-primary to-secondary transition"></div>
       </div>
+     <p class="mt-4 font-semibold text-slate-800 text-center leading-snug">
+  Bergville District Academic Excellence Award  
+  <span class="block text-sm text-slate-500 font-medium">
+    Recognised as Top Performing School – 2023
+  </span>
+</p>
     </div>
+
+    <!-- Achievement 2 -->
+    <div class="group relative w-full max-w-xs">
+      <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
+        <img src="images/debating_2024.jpg" 
+             class="w-full h-64 object-cover" 
+             alt="Debating Team 2024">
+        <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-40 bg-gradient-to-r from-primary to-secondary transition"></div>
+      </div>
+      <p class="mt-4 font-semibold text-slate-800 text-center leading-snug">
+  Inter-School Debating Competition  
+  <span class="block text-sm text-slate-500 font-medium">
+    2nd Place Achievement – 2024
+  </span>
+</p>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="group relative w-full max-w-xs">
+      <div class="overflow-hidden rounded-2xl shadow-md group-hover:shadow-xl transition transform group-hover:-translate-y-1 group-hover:scale-105 relative">
+        <img src="images/achievement_2025.jpg" 
+             class="w-full h-64 object-cover" 
+             alt="Best School 2025">
+        <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-40 bg-gradient-to-r from-primary to-secondary transition"></div>
+      </div>
+      <p class="mt-4 font-semibold text-slate-800 text-center leading-snug">
+  Bergville District Academic Excellence Award  
+  <span class="block text-sm text-slate-500 font-medium">
+    Top Performing School – 2025
+  </span>
+</p>
+    </div>
+
+  </div>
+</div>
+    <!-- Academic Badge -->
+<div class="flex justify-center mt-20 mb-16 px-6">
+  <div class="relative inline-flex items-center justify-center px-8 md:px-10 py-5 text-white font-semibold text-sm md:text-base tracking-wide uppercase">
+
+    <!-- Glow (blue theme instead of amber) -->
+    <div class="absolute inset-0 bg-primary opacity-20 blur-2xl rounded-xl"></div>
+
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-xl shadow-xl"></div>
+
+    <!-- Content -->
+    <div class="relative flex items-center gap-3 text-center">
+
+      <!-- Trophy Icon (NO emoji) -->
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="w-6 h-6 text-white shrink-0" 
+           fill="currentColor" 
+           viewBox="0 0 24 24">
+        <path d="M17 3H7v2H3v3c0 2.21 1.79 4 4 4h.09A5.002 5.002 0 0011 16.9V19H8v2h8v-2h-3v-2.1A5.002 5.002 0 0016.91 12H17c2.21 0 4-1.79 4-4V5h-4V3z"/>
+      </svg>
+
+      <span>
+        National Senior Certificate – Highest Pass Rate Achieved: 92.6% (2024)
+      </span>
+
+    </div>
+  </div>
+</div>
 
     <!-- Pass Rate Growth Chart -->
     <div class="text-center mb-24">
-      <h3 class="text-3xl font-bold text-slate-900 mb-4">📈 Matric Pass Rate Growth</h3>
+      <h3 class="text-3xl font-bold text-slate-900 mb-4"><div class="flex items-center justify-center gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3v18m0 0l-4-4m4 4l4-4M3 11h18"/>
+  </svg>
+  <span>Matric Pass Rate Growth</span>
+</div></h3>
       <p class="text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
         A visual representation of our academic performance over the years, reflecting consistent improvement and commitment to excellence.
       </p>

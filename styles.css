@@ -2572,3 +2572,288 @@ input:checked ~ .event-gallery {
 #hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f4f4;
+}
+
+/* ===============================
+   MODERN COLOR SYSTEM (BLUE + GREY)
+================================ */
+:root {
+    --primary-blue: #3b82f6;   /* modern soft blue */
+    --deep-blue: #2563eb;
+    --text-dark: #111827;
+    --muted: #6b7280;
+    --light-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+}
+
+/* ===============================
+   MAIN WRAPPER
+================================ */
+.vision-section {
+    max-width: 1450px;
+    margin: auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* ===============================
+   HERO / TOP SECTION
+================================ */
+.vision-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    min-height: 600px;
+    background: #fff;
+}
+
+/* TEXT SIDE */
+.vision-content {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+}
+
+.text-box h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 0.95;
+    color: var(--text-dark);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.text-box h1 span {
+    color: var(--primary-blue);
+}
+
+.text-box p {
+    font-size: 20px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* ===============================
+   IMAGE SIDE (FULL COVER FIX)
+================================ */
+.vision-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* FULL IMAGE FIX */
+.vision-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* MODERN GREY-BLUE CURVE */
+.modern-curve {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 140px;
+    height: 100%;
+    z-index: 5;
+}
+
+.modern-curve svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* subtle overlay (professional feel) */
+.vision-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to left,
+        rgba(59,130,246,0.12),
+        transparent
+    );
+}
+
+/* ===============================
+   CARDS SECTION
+================================ */
+.cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 60px;
+    background: var(--light-bg);
+}
+
+/* CARD STYLE (clean modern grey) */
+.info-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 65px 30px 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    position: relative;
+    border: 1px solid var(--border);
+    border-bottom: 4px solid var(--primary-blue);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(59,130,246,0.12);
+}
+
+/* ICON */
+.circle-icon {
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 78px;
+    border-radius: 18px; /* modern squircle */
+    background: var(--primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 20px rgba(59,130,246,0.25);
+}
+
+/* HEADINGS */
+.info-card h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-blue);
+    margin: 0 auto 18px;
+    border-radius: 10px;
+}
+
+/* TEXT */
+.info-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* ===============================
+   MOTTO
+================================ */
+.motto-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.motto-big {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.motto-small {
+    font-size: 16px !important;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1000px) {
+
+    .vision-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-content {
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    .text-box p {
+        margin: auto;
+    }
+
+    .vision-image-wrapper {
+        height: 320px;
+    }
+
+    .modern-curve {
+        display: none;
+    }
+
+    .cards-wrap {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .motto-big {
+        font-size: 44px;
+    }
+
+    .motto-script {
+        font-size: 36px;
+    }
+}
+.cards-intro {
+    text-align: center;
+    padding: 60px 20px 30px;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* BADGE (modern pill style) */
+.cards-intro .badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* TITLE */
+.cards-intro h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* DESCRIPTION */
+.cards-intro p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+}
